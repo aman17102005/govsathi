@@ -1,4 +1,4 @@
-import { FormEvent, useState } from 'react'
+import { FormEvent } from 'react'
 import { LANGUAGES, Language, translations } from '../lib/translations'
 
 interface QueryFormProps {
@@ -6,10 +6,18 @@ interface QueryFormProps {
   onQueryChange: (value: string) => void
   onSubmit: () => void
   loading?: boolean
+  language: Language
+  onLanguageChange: (language: Language) => void
 }
 
-export default function QueryForm({ query, onQueryChange, onSubmit, loading = false }: QueryFormProps) {
-  const [language, setLanguage] = useState<Language>('en')
+export default function QueryForm({
+  query,
+  onQueryChange,
+  onSubmit,
+  loading = false,
+  language,
+  onLanguageChange,
+}: QueryFormProps) {
   const t = translations[language]
 
   function handleSubmit(event: FormEvent) {
@@ -20,15 +28,23 @@ export default function QueryForm({ query, onQueryChange, onSubmit, loading = fa
   return (
     <form onSubmit={handleSubmit} className="mt-8">
       <div className="flex items-center justify-between gap-3 mb-2">
-        <label htmlFor="question" className="block text-sm font-medium text-ink">
+        <label
+          htmlFor="question"
+          className="block text-sm font-medium text-ink"
+        >
           {t.formLabel}
         </label>
-        <div className="flex gap-1" role="group" aria-label={t.languageLabel}>
+
+        <div
+          className="flex gap-1"
+          role="group"
+          aria-label={t.languageLabel}
+        >
           {LANGUAGES.map((lang) => (
             <button
               key={lang}
               type="button"
-              onClick={() => setLanguage(lang)}
+              onClick={() => onLanguageChange(lang)}
               aria-pressed={language === lang}
               className={`text-xs px-2 py-1 rounded-sm border transition-colors ${
                 language === lang
@@ -59,6 +75,7 @@ export default function QueryForm({ query, onQueryChange, onSubmit, loading = fa
         >
           {loading ? t.askButtonLoading : t.askButton}
         </button>
+
         <button
           type="button"
           onClick={() => onQueryChange(t.exampleQuestion)}
