@@ -1,5 +1,10 @@
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 import express from 'express'
 import { GoogleGenAI } from '@google/genai'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+const distDir = path.join(__dirname, '..', 'dist')
 
 const app = express()
 app.use(express.json())
@@ -54,7 +59,15 @@ ${query}`
   }
 })
 
+// Serve the built Vite frontend.
+app.use(express.static(distDir))
+
+// Any other GET route falls back to the SPA's index.html (client-side routing).
+app.get('*', (_req, res) => {
+  res.sendFile(path.join(distDir, 'index.html'))
+})
+
 const port = process.env.PORT || 3001
 app.listen(port, () => {
-  console.log(`GovSathi AI backend listening on port ${port}`)
+  console.log(`GovSathi server listening on port ${port}`)
 })
