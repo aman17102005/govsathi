@@ -27,7 +27,7 @@ export default function App() {
     setTimeout(() => {
       const matches = searchSchemes(query, schemes)
       setResults(matches)
-      setAnswer(generateAnswer(query, matches))
+      setAnswer(generateAnswer(query, matches, language))
       setHasSearched(true)
       setIsLoading(false)
     }, 300)
