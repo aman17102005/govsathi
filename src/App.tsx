@@ -19,18 +19,33 @@ export default function App() {
 
   const t = translations[language]
 
-  function handleAsk() {
+  async function handleAsk() {
     if (!query.trim()) return
 
     setIsLoading(true)
 
-    setTimeout(() => {
-      const matches = searchSchemes(query, schemes)
-      setResults(matches)
+    const matches = searchSchemes(query, schemes)
+    setResults(matches)
+
+    try {
+      const response = await fetch('/api/generate-answer', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query, results: matches, language }),
+      })
+
+      if (!response.ok) throw new Error('AI request failed')
+
+      const data = await response.json()
+      if (!data.answer) throw new Error('AI response missing answer')
+
+      setAnswer(data.answer)
+    } catch {
       setAnswer(generateAnswer(query, matches, language))
-      setHasSearched(true)
-      setIsLoading(false)
-    }, 300)
+    }
+
+    setHasSearched(true)
+    setIsLoading(false)
   }
 
   return (
