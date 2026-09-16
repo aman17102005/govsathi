@@ -74,7 +74,12 @@ export default function App() {
               </p>
               <div className="space-y-5">
                 {results.map((scheme, index) => (
-                  <ResultCard key={scheme.id} scheme={scheme} rank={index + 1} />
+                  <ResultCard
+  key={scheme.id}
+  scheme={scheme}
+  rank={index + 1}
+  language={language}
+/>
                 ))}
               </div>
             </div>
