@@ -4,6 +4,7 @@ import type { Scheme, ScoredScheme } from './types'
 import QueryForm from './components/QueryForm'
 import ResultCard from './components/ResultCard'
 import { searchSchemes } from './lib/search'
+import { generateAnswer } from './lib/generateAnswer'
 import { Language, translations } from './lib/translations'
 
 const schemes = schemesData as Scheme[]
@@ -11,6 +12,7 @@ const schemes = schemesData as Scheme[]
 export default function App() {
   const [query, setQuery] = useState('')
   const [results, setResults] = useState<ScoredScheme[]>([])
+  const [answer, setAnswer] = useState('')
   const [hasSearched, setHasSearched] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [language, setLanguage] = useState<Language>('en')
@@ -23,7 +25,9 @@ export default function App() {
     setIsLoading(true)
 
     setTimeout(() => {
-      setResults(searchSchemes(query, schemes))
+      const matches = searchSchemes(query, schemes)
+      setResults(matches)
+      setAnswer(generateAnswer(query, matches))
       setHasSearched(true)
       setIsLoading(false)
     }, 300)
@@ -72,6 +76,14 @@ export default function App() {
 
           {hasSearched && results.length > 0 && (
             <div className="border-t border-line pt-6">
+              {answer && (
+                <div className="mb-8 rounded-sm border border-accent/25 bg-accent/5 px-5 py-4">
+                  <p className="text-sm text-ink leading-relaxed whitespace-pre-line">
+                    {answer}
+                  </p>
+                </div>
+              )}
+
               <div className="flex items-baseline justify-between gap-4 mb-5">
                 <h2 className="font-serif text-2xl text-ink">
                   {results.length === 1
