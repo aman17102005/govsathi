@@ -76,7 +76,7 @@ export default function App() {
                 <h2 className="font-serif text-2xl text-ink">
                   {results.length === 1
                     ? t.closestMatch
-                    : t.topMatches.replace('{count}', String(results.length))}
+                    : t.topMatches(results.length)}
                 </h2>
               </div>
 
@@ -99,7 +99,7 @@ export default function App() {
         </section>
 
         <footer className="mt-16 pt-6 border-t border-line text-xs text-inkmuted">
-          {t.footer.replace('{count}', String(schemes.length))}
+          {t.footer(schemes.length)}
         </footer>
       </main>
     </div>
