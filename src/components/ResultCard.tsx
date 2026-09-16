@@ -1,5 +1,6 @@
 import type { ScoredScheme } from '../types'
 import { Language, translations } from '../lib/translations'
+import { schemeTranslations } from '../lib/schemeTranslations'
 
 interface ResultCardProps {
   scheme: ScoredScheme
@@ -7,17 +8,28 @@ interface ResultCardProps {
   language: Language
 }
 
-export default function ResultCard({ scheme, rank, language }: ResultCardProps) {
+export default function ResultCard({
+  scheme,
+  rank,
+  language,
+}: ResultCardProps) {
   const t = translations[language]
+
+  const localizedScheme =
+    language === 'en'
+      ? scheme
+      : schemeTranslations[language][scheme.id] || scheme
 
   return (
     <article className="border border-line bg-white rounded-sm p-6 sm:p-7">
       <div className="flex items-start justify-between gap-4">
         <div>
-          <p className="text-sm text-inkmuted mb-1">{scheme.category}</p>
+          <p className="text-sm text-inkmuted mb-1">
+            {localizedScheme.category}
+          </p>
 
           <h3 className="font-serif text-xl sm:text-2xl leading-snug text-ink">
-            {scheme.name}
+            {localizedScheme.name}
           </h3>
         </div>
 
@@ -27,7 +39,7 @@ export default function ResultCard({ scheme, rank, language }: ResultCardProps) 
       </div>
 
       <p className="mt-4 text-ink/90 leading-relaxed">
-        {scheme.description}
+        {localizedScheme.description}
       </p>
 
       <div className="mt-5 grid gap-5 sm:grid-cols-2">
@@ -37,7 +49,7 @@ export default function ResultCard({ scheme, rank, language }: ResultCardProps) 
           </h4>
 
           <p className="text-sm text-inkmuted leading-relaxed">
-            {scheme.eligibility}
+            {localizedScheme.eligibility}
           </p>
         </div>
 
@@ -47,7 +59,7 @@ export default function ResultCard({ scheme, rank, language }: ResultCardProps) 
           </h4>
 
           <ul className="text-sm text-inkmuted leading-relaxed list-disc list-inside space-y-0.5">
-            {scheme.documents.map((doc) => (
+            {localizedScheme.documents.map((doc) => (
               <li key={doc}>{doc}</li>
             ))}
           </ul>
