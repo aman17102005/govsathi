@@ -11,11 +11,16 @@ export default function App() {
   const [query, setQuery] = useState('')
   const [results, setResults] = useState<ScoredScheme[]>([])
   const [hasSearched, setHasSearched] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
 
   function handleAsk() {
     if (!query.trim()) return
-    setResults(searchSchemes(query, schemes))
-    setHasSearched(true)
+    setIsLoading(true)
+    setTimeout(() => {
+      setResults(searchSchemes(query, schemes))
+      setHasSearched(true)
+      setIsLoading(false)
+    }, 300)
   }
 
   return (
@@ -33,7 +38,7 @@ export default function App() {
           </p>
         </header>
 
-        <QueryForm query={query} onQueryChange={setQuery} onSubmit={handleAsk} />
+        <QueryForm query={query} onQueryChange={setQuery} onSubmit={handleAsk} loading={isLoading} />
 
         <section className="mt-12">
           {!hasSearched && (
