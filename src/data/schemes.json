@@ -1,0 +1,92 @@
+[
+  {
+    "id": "pm-kisan",
+    "name": "PM-KISAN (Pradhan Mantri Kisan Samman Nidhi)",
+    "category": "Agriculture & Farmers",
+    "description": "An income support scheme that gives small and marginal farmer families direct cash assistance, paid in three instalments a year, to help meet farming and household expenses.",
+    "eligibility": "Small and marginal farmer families who own cultivable land, subject to standard exclusion criteria such as income-tax payers, current or former government employees above a certain level, and other high-income professionals.",
+    "documents": ["Aadhaar card", "Land ownership records", "Bank account passbook", "Passport-size photograph"],
+    "keywords": ["farmer", "farming", "agriculture", "land", "cultivation", "kisan", "income support", "rural", "crops"]
+  },
+  {
+    "id": "ayushman-bharat-pmjay",
+    "name": "Ayushman Bharat – Pradhan Mantri Jan Arogya Yojana (PM-JAY)",
+    "category": "Health",
+    "description": "A health insurance scheme that covers hospitalisation costs for secondary and tertiary medical care, allowing cashless treatment at empanelled hospitals across the country.",
+    "eligibility": "Families identified as deprived or vulnerable under the Socio-Economic Caste Census (SECC) 2011 database. There is no cap on family size, age, or gender of members covered.",
+    "documents": ["Aadhaar card", "Ration card", "SECC eligibility confirmation or PM-JAY card", "Family ID (in some states)"],
+    "keywords": ["health", "hospital", "medical", "insurance", "treatment", "poor", "bpl", "ayushman", "cashless", "illness", "surgery"]
+  },
+  {
+    "id": "pmay",
+    "name": "Pradhan Mantri Awas Yojana (PMAY – Urban and Gramin)",
+    "category": "Housing",
+    "description": "A housing scheme that provides financial assistance for building or buying a pucca (permanent) house, aimed at families who currently live without one.",
+    "eligibility": "Families without a pucca house. The urban component covers EWS, LIG, and MIG income categories with defined income limits; the rural (Gramin) component targets houseless and kutcha-house families identified through SECC data.",
+    "documents": ["Aadhaar card", "Income certificate", "Bank account details", "Land or property documents, where applicable"],
+    "keywords": ["housing", "house", "home", "pucca", "awas", "construction", "shelter", "ews", "lig", "rent"]
+  },
+  {
+    "id": "sukanya-samriddhi",
+    "name": "Sukanya Samriddhi Yojana",
+    "category": "Women & Child Welfare",
+    "description": "A small-savings scheme for a girl child that offers a relatively high, government-fixed interest rate, meant to build a fund for her future education and marriage expenses.",
+    "eligibility": "Parents or legal guardians of a girl child below 10 years of age can open the account in her name. A family may generally open up to two such accounts, with exceptions for twins or triplets.",
+    "documents": ["Birth certificate of the girl child", "Identity proof of parent or guardian", "Address proof"],
+    "keywords": ["girl child", "daughter", "savings", "education", "marriage", "women", "sukanya", "deposit", "account"]
+  },
+  {
+    "id": "central-sector-scholarship",
+    "name": "Central Sector Scheme of Scholarship for College and University Students",
+    "category": "Education & Scholarship",
+    "description": "A merit-based scholarship that gives students from low-income families financial support to cover day-to-day expenses while pursuing undergraduate studies.",
+    "eligibility": "Students who passed Class 12 in the top percentile of their board (typically 80th percentile and above), are pursuing a regular undergraduate course, and whose total annual family income is up to ₹4.5 lakh.",
+    "documents": ["Class 12 marksheet", "Income certificate", "Aadhaar card", "Bank account passbook", "Bonafide certificate from institution"],
+    "keywords": ["scholarship", "student", "college", "university", "education", "income", "merit", "study", "12th", "undergraduate", "punjab"]
+  },
+  {
+    "id": "post-matric-sc",
+    "name": "Post Matric Scholarship Scheme for SC Students",
+    "category": "Education & Scholarship",
+    "description": "Financial assistance for Scheduled Caste students studying at the post-matriculation stage, covering tuition and maintenance costs so students can continue their education.",
+    "eligibility": "Students belonging to the Scheduled Caste category, studying in Class 11 and above, whose total family income does not exceed ₹2.5 lakh per year.",
+    "documents": ["Caste certificate", "Income certificate", "Previous year marksheet", "Aadhaar card", "Bank account passbook", "Institution fee receipt"],
+    "keywords": ["sc", "scheduled caste", "scholarship", "student", "post matric", "education", "income", "caste", "tuition"]
+  },
+  {
+    "id": "pm-ujjwala",
+    "name": "Pradhan Mantri Ujjwala Yojana",
+    "category": "Women & Household Welfare",
+    "description": "Provides a free LPG gas connection to women from low-income households, to replace unsafe cooking fuels like firewood and cow-dung cakes with clean cooking gas.",
+    "eligibility": "Adult women from BPL households and other specified low-income categories who do not already have an LPG connection registered in their household.",
+    "documents": ["Aadhaar card", "BPL or ration card", "Bank account details", "Passport-size photograph"],
+    "keywords": ["lpg", "gas connection", "women", "cooking", "bpl", "household", "ujjwala", "kitchen", "fuel"]
+  },
+  {
+    "id": "atal-pension-yojana",
+    "name": "Atal Pension Yojana",
+    "category": "Pension & Social Security",
+    "description": "A voluntary, government-backed pension scheme that guarantees a fixed monthly pension after age 60, aimed mainly at workers in the unorganised sector who lack formal retirement savings.",
+    "eligibility": "Indian citizens aged 18 to 40 years with a savings bank account or post office savings account; generally not available to income-tax payers under current guidelines.",
+    "documents": ["Aadhaar card", "Bank account passbook", "Mobile number", "Nominee details"],
+    "keywords": ["pension", "retirement", "unorganised sector", "savings", "old age", "atal pension", "worker", "monthly income"]
+  },
+  {
+    "id": "pm-mudra-yojana",
+    "name": "Pradhan Mantri Mudra Yojana",
+    "category": "Employment & Entrepreneurship",
+    "description": "Offers collateral-free loans of up to ₹10 lakh to small and micro, non-farm businesses, to help individuals start or expand manufacturing, trading, or service ventures.",
+    "eligibility": "Indian citizens with a viable business plan for a non-farm income-generating activity; loans are categorised as Shishu, Kishor, and Tarun depending on the amount needed.",
+    "documents": ["Aadhaar card", "Business plan or proof of existing business", "Address proof", "Bank account details"],
+    "keywords": ["business", "loan", "entrepreneur", "self employment", "mudra", "startup", "msme", "shop", "small business"]
+  },
+  {
+    "id": "pm-jan-dhan-yojana",
+    "name": "Pradhan Mantri Jan Dhan Yojana",
+    "category": "Financial Inclusion",
+    "description": "A national financial inclusion scheme that gives citizens access to a basic, no-minimum-balance bank account, a RuPay debit card, and accident insurance cover.",
+    "eligibility": "Any Indian citizen who does not already have a bank account, with a particular focus on individuals from low-income or previously unbanked households.",
+    "documents": ["Aadhaar card or other valid ID proof", "Address proof", "Passport-size photograph"],
+    "keywords": ["bank account", "financial inclusion", "jan dhan", "zero balance", "rupay", "unbanked", "savings account", "debit card"]
+  }
+]
