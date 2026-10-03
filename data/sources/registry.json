@@ -1,0 +1,22 @@
+{
+  "_comment": "Official sources the pipeline may contact. Hosts must be gov.in / nic.in (enforced in code). No national machine-readable scheme feed was found: myScheme exposes no documented public API and its pages are client-rendered, and several ministry sites (mohua, msde, pib, india.gov.in) return HTTP 403 to automated clients. Discovery therefore covers only the sources below; it is NOT exhaustive. www.punjab.gov.in was tried and excluded: its TLS server requires unsafe legacy renegotiation, which this project deliberately does not enable.",
+  "discovery": [
+    {
+      "id": "rajasthan-sitemap",
+      "kind": "sitemap",
+      "url": "https://rajasthan.gov.in/sitemap.xml",
+      "include": "scheme|yojana|yojna|pension|scholarship",
+      "note": "State portal sitemap listed in robots.txt"
+    }
+  ],
+  "assistedSources": [
+    {
+      "host": "www.myscheme.gov.in",
+      "reason": "Client-rendered (Next.js); no documented public API or terms for automated use. Text is imported from a rendering browser with provenance (npm run ingest -- import <file>)."
+    },
+    {
+      "host": "www.pib.gov.in",
+      "reason": "Press Information Bureau returns HTTP 403 to non-browser clients; press releases are imported from a rendering browser with provenance."
+    }
+  ]
+}

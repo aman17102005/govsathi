@@ -1,0 +1,168 @@
+{
+  "id": "rj-specially-abled-pension",
+  "level": "state",
+  "stateCodes": [
+    "RJ"
+  ],
+  "names": {
+    "en": "Chief Minister Specially Abled Samman Pension Scheme"
+  },
+  "department": "Government of Rajasthan",
+  "categories": [
+    "pension",
+    "disability",
+    "social_welfare"
+  ],
+  "benefits": [
+    {
+      "type": "pension",
+      "amount": 1500,
+      "period": "month",
+      "upTo": true
+    }
+  ],
+  "rules": [
+    {
+      "id": "disabled",
+      "hard": true,
+      "rule": {
+        "fact": "disability",
+        "op": "is",
+        "value": true
+      }
+    },
+    {
+      "id": "pct",
+      "hard": true,
+      "rule": {
+        "fact": "disabilityPercent",
+        "op": "gte",
+        "value": 40
+      }
+    },
+    {
+      "id": "income",
+      "hard": true,
+      "rule": {
+        "fact": "personalIncome",
+        "op": "lte",
+        "value": 60000
+      }
+    }
+  ],
+  "additionalConditions": true,
+  "documents": [
+    "aadhaar",
+    "jan_aadhaar"
+  ],
+  "apply": {
+    "channels": [
+      "online_portal",
+      "emitra"
+    ],
+    "steps": [
+      "visit_portal",
+      "register_login",
+      "fill_form",
+      "submit_form"
+    ],
+    "url": "https://ssp.rajasthan.gov.in/"
+  },
+  "sources": [
+    {
+      "title": "Rajasthan SSP portal",
+      "url": "https://ssp.rajasthan.gov.in/",
+      "publisher": "Government of Rajasthan",
+      "accessed": "2026-10-03"
+    },
+    {
+      "title": "myScheme: Chief Minister Specially Abled Samman Pension Scheme",
+      "url": "https://www.myscheme.gov.in/schemes/cmsasps",
+      "publisher": "myScheme (MeitY / NeGD)",
+      "accessed": "2026-10-03"
+    }
+  ],
+  "lastVerified": "2026-10-03",
+  "keywords": [
+    "disability",
+    "divyang",
+    "specially abled",
+    "pension for disabled"
+  ],
+  "dataVersion": 2,
+  "updatedOn": "2026-10-03",
+  "lifecycle": "published",
+  "verification": {
+    "level": "automated",
+    "by": "ingest-pipeline",
+    "on": "2026-10-03",
+    "method": "Claims matched against fetched official source text (keyword/number evidence). Not checked by a person."
+  },
+  "history": [
+    {
+      "version": 1,
+      "date": "2026-10-03",
+      "lifecycle": "pending-verification",
+      "change": "Initial record from official sources read during development.",
+      "by": "dev-assistant"
+    },
+    {
+      "version": 2,
+      "date": "2026-10-03",
+      "lifecycle": "published",
+      "change": "Passed the automated publication gate (official sources, claim citations, no open discrepancy, current).",
+      "by": "ingest-pipeline"
+    }
+  ],
+  "citations": [
+    {
+      "claim": "benefit:0",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "To leprosy-free beneficiaries of all ages ( male and female): Rs 1,500/- per month.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:disabled",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "In particular, Article 41 of the Constitution of India directs the State to provide public assistance to its citizens in case of destitute, old age, sickness and disablement and in other cases of undeserved want within the limit of its econ",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:pct",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "In State, a specially-abled person of any age who is suffering from any one or more disabilities (40% and above disability) will be eligible for a pension.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:income",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Own combined annual income (from all sources) is up to Rs 60,000/-.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:aadhaar",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "Aadhaar",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:jan_aadhaar",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "Janaadhaar",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "RajSSP",
+      "readOn": "2026-10-03"
+    }
+  ]
+}

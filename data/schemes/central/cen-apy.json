@@ -1,0 +1,155 @@
+{
+  "id": "cen-apy",
+  "level": "central",
+  "stateCodes": [],
+  "names": {
+    "en": "Atal Pension Yojana (APY)"
+  },
+  "department": "Ministry of Finance",
+  "categories": [
+    "pension",
+    "finance"
+  ],
+  "benefits": [
+    {
+      "type": "pension",
+      "amount": 5000,
+      "period": "month",
+      "upTo": true
+    }
+  ],
+  "rules": [
+    {
+      "id": "age",
+      "hard": true,
+      "rule": {
+        "fact": "age",
+        "op": "between",
+        "value": [
+          18,
+          40
+        ]
+      }
+    },
+    {
+      "id": "bank",
+      "hard": true,
+      "rule": {
+        "fact": "hasBankAccount",
+        "op": "is",
+        "value": true
+      }
+    },
+    {
+      "id": "noTax",
+      "hard": true,
+      "rule": {
+        "fact": "incomeTaxPayer",
+        "op": "is",
+        "value": false
+      }
+    }
+  ],
+  "additionalConditions": false,
+  "documents": [
+    "bank_account_details"
+  ],
+  "apply": {
+    "channels": [
+      "bank_branch",
+      "post_office",
+      "online_portal"
+    ],
+    "steps": [
+      "visit_portal",
+      "register_login",
+      "enter_details",
+      "submit_form"
+    ]
+  },
+  "sources": [
+    {
+      "title": "myScheme: Atal Pension Yojana",
+      "url": "https://www.myscheme.gov.in/schemes/apy",
+      "publisher": "myScheme (MeitY / NeGD)",
+      "accessed": "2026-10-03"
+    }
+  ],
+  "lastVerified": "2026-10-03",
+  "keywords": [
+    "retirement",
+    "pension",
+    "old age income",
+    "unorganised sector",
+    "savings"
+  ],
+  "dataVersion": 3,
+  "updatedOn": "2026-10-03",
+  "lifecycle": "published",
+  "verification": {
+    "level": "automated",
+    "by": "ingest-pipeline",
+    "on": "2026-10-03",
+    "method": "Claims matched against fetched official source text (keyword/number evidence). Not checked by a person."
+  },
+  "history": [
+    {
+      "version": 1,
+      "date": "2026-10-03",
+      "lifecycle": "pending-verification",
+      "change": "Initial record from official sources read during development.",
+      "by": "dev-assistant"
+    },
+    {
+      "version": 2,
+      "date": "2026-10-03",
+      "lifecycle": "pending-verification",
+      "change": "Removed apply link: its host is not a gov.in/nic.in domain, so it cannot be treated as an official link; the official source pages are shown instead.",
+      "by": "maintainer-audit"
+    },
+    {
+      "version": 3,
+      "date": "2026-10-03",
+      "lifecycle": "published",
+      "change": "Passed the automated publication gate (official sources, claim citations, no open discrepancy, current).",
+      "by": "ingest-pipeline"
+    }
+  ],
+  "citations": [
+    {
+      "claim": "benefit:0",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "(i) Guaranteed minimum pension amount: Each subscriber under APY shall receive a guaranteed minimum pension of Rs 1000/- per month or Rs 2000/- per month or Rs 3000/- per month or Rs 4000/- per month or Rs 5000/- per month, after the age of",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:age",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "Atal Pension Yojana (APY) is an old age income security scheme for a savings account holder in the age group of 18-40 years who is not an income tax-payee.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:bank",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "Bank Account HoldersPensionUnorganized Workers",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:noTax",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "Atal Pension Yojana (APY) is an old age income security scheme for a savings account holder in the age group of 18-40 years who is not an income tax-payee.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:bank_account_details",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "Bank Account HoldersPensionUnorganized Workers",
+      "readOn": "2026-10-03"
+    }
+  ]
+}

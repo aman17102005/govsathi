@@ -1,0 +1,51 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-ink: #14213d;
+  --color-muted: #4a5568;
+  --color-paper: #fbfaf7;
+  --color-card: #ffffff;
+  --color-line: #d9d6cc;
+  --color-brand: #1b3a5c;
+  --color-brand-dark: #12293f;
+  --color-saffron: #d9731a;
+  --color-leaf: #1f6b45;
+  --color-focus: #0b57d0;
+}
+
+html {
+  font-family: var(--font-body, 'Noto Sans'), system-ui, sans-serif;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  -webkit-text-size-adjust: 100%;
+}
+body { margin: 0; min-height: 100vh; }
+
+
+:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+/* Tailwind text-size utilities carry their own tight line-heights; Indic and Nastaliq scripts need more room. */
+html[data-script]:not([data-script='latin']) {
+  --text-sm--line-height: 1.7;
+  --text-lg--line-height: 1.7;
+  --text-xl--line-height: 1.6;
+  --text-3xl--line-height: 1.5;
+  --text-4xl--line-height: 1.45;
+}
+html[data-script='nastaliq'] {
+  --text-sm--line-height: 2.2;
+  --text-base--line-height: 2.2;
+  --text-lg--line-height: 2.2;
+  --text-xl--line-height: 2.1;
+  --text-3xl--line-height: 2.1;
+  --text-4xl--line-height: 2;
+}
+/* Nastaliq glyphs render visually larger than other scripts at the same font-size. */
+html[data-script='nastaliq'] {
+  --text-3xl: 1.5rem;
+  --text-4xl: 1.75rem;
+}

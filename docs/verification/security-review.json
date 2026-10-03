@@ -1,0 +1,19 @@
+{
+  "passed": false,
+  "partial": true,
+  "date": "2026-10-03",
+  "performedBy": "development assistant (automated tests and self-review)",
+  "note": "Partial. Not a substitute for the independent/human work listed under notDone.",
+  "done": [
+    "SSRF guard, robots, redirect and size tests (ingest.test.ts)",
+    "User-key handling, redaction and header-validation tests",
+    "Prompt-injection tests; no innerHTML/eval in web source",
+    "CSP connect-src 'self'; no-store on /api",
+    "npm audit: 1 low (esbuild, build-time)"
+  ],
+  "notDone": [
+    "Independent penetration test",
+    "Dependency audit in CI",
+    "Rate limiting across multiple instances"
+  ]
+}

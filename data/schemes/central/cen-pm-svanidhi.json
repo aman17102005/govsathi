@@ -1,0 +1,181 @@
+{
+  "id": "cen-pm-svanidhi",
+  "level": "central",
+  "stateCodes": [],
+  "names": {
+    "en": "PM Street Vendor’s AtmaNirbhar Nidhi (PM SVANidhi)"
+  },
+  "department": "Ministry of Housing and Urban Affairs",
+  "categories": [
+    "entrepreneurship",
+    "finance"
+  ],
+  "benefits": [
+    {
+      "type": "loan",
+      "amount": 15000,
+      "upTo": true
+    }
+  ],
+  "rules": [
+    {
+      "id": "vendor",
+      "hard": true,
+      "rule": {
+        "fact": "occupation",
+        "op": "in",
+        "value": [
+          "street_vendor"
+        ]
+      }
+    }
+  ],
+  "additionalConditions": true,
+  "documents": [
+    "vending_certificate",
+    "aadhaar",
+    "mobile_number"
+  ],
+  "apply": {
+    "channels": [
+      "online_portal",
+      "csc"
+    ],
+    "steps": [
+      "visit_portal",
+      "register_login",
+      "enter_details",
+      "upload_documents",
+      "submit_form"
+    ],
+    "url": "https://pmsvanidhi.mohua.gov.in/"
+  },
+  "sources": [
+    {
+      "title": "PM SVANidhi official portal",
+      "url": "https://pmsvanidhi.mohua.gov.in/",
+      "publisher": "Ministry of Housing & Urban Affairs",
+      "accessed": "2026-10-03"
+    },
+    {
+      "title": "myScheme: PM SVANidhi",
+      "url": "https://www.myscheme.gov.in/schemes/pm-svanidhi",
+      "publisher": "myScheme (MeitY / NeGD)",
+      "accessed": "2026-10-03"
+    },
+    {
+      "title": "PIB: Cabinet approves restructuring and extension of PM SVANidhi (27 Aug 2025)",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2161157&reg=48&lang=2",
+      "publisher": "Press Information Bureau",
+      "accessed": "2026-10-03"
+    }
+  ],
+  "lastVerified": "2026-10-03",
+  "keywords": [
+    "street vendor",
+    "hawker",
+    "micro credit",
+    "working capital loan",
+    "vendor"
+  ],
+  "dataVersion": 3,
+  "updatedOn": "2026-10-03",
+  "discrepancies": [
+    {
+      "field": "benefits[0].amount",
+      "values": [
+        {
+          "src": 2,
+          "value": "first tranche up to INR 15,000 (Cabinet decision, Aug 2025)"
+        },
+        {
+          "src": 1,
+          "value": "INR 10,000 (myScheme page, pre-restructuring figure)"
+        }
+      ],
+      "used": 2,
+      "resolution": "The Cabinet decision published by PIB (read 2026-10-03) is the newer official source and states the restructured first-tranche limit; the myScheme figure is the earlier one.",
+      "status": "resolved",
+      "foundOn": "2026-10-03"
+    }
+  ],
+  "lifecycle": "published",
+  "verification": {
+    "level": "automated",
+    "by": "ingest-pipeline",
+    "on": "2026-10-03",
+    "method": "Claims matched against fetched official source text (keyword/number evidence). Not checked by a person."
+  },
+  "history": [
+    {
+      "version": 1,
+      "date": "2026-10-03",
+      "lifecycle": "pending-verification",
+      "change": "Initial record from official sources read during development.",
+      "by": "dev-assistant"
+    },
+    {
+      "version": 2,
+      "date": "2026-10-03",
+      "lifecycle": "pending-verification",
+      "change": "Amount and validity taken from the PIB Cabinet release; discrepancy with myScheme resolved in favour of the newer official source.",
+      "by": "maintainer-audit"
+    },
+    {
+      "version": 3,
+      "date": "2026-10-03",
+      "lifecycle": "published",
+      "change": "Passed the automated publication gate (official sources, claim citations, no open discrepancy, current).",
+      "by": "ingest-pipeline"
+    }
+  ],
+  "citations": [
+    {
+      "claim": "benefit:0",
+      "src": 2,
+      "evidence": "text-match",
+      "quote": "The enhanced loan structure includes first tranche loans increased up to ₹15,000 (from ₹10,000) and second tranche loans increased up to ₹25,000 (from ₹20,000), while the third tranche remains unchanged at ₹50,000.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:vendor",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "PM Street Vendor’s AtmaNirbhar Nidhi",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:vending_certificate",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "|| Vendor Mobility (ULB Transfer) facility is now available on PM SVANidhi to enable street vendors to update their ULB details in case of migration to another vending location.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:aadhaar",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "login with Aadhaar",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:mobile_number",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "Update: If you want to change your Mobile Number , Please Click here, and",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "PM SVANidhi",
+      "readOn": "2026-10-03"
+    }
+  ],
+  "validity": {
+    "endDate": "2030-03-31",
+    "effectiveFrom": "2025-08-27",
+    "src": 2
+  }
+}

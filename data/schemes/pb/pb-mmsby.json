@@ -1,0 +1,120 @@
+{
+  "id": "pb-mmsby",
+  "level": "state",
+  "stateCodes": [
+    "PB"
+  ],
+  "names": {
+    "en": "Mukh Mantri Sehat Yojana (MMSY)"
+  },
+  "department": "Government of Punjab",
+  "categories": [
+    "healthcare",
+    "insurance"
+  ],
+  "benefits": [
+    {
+      "type": "health_cover",
+      "amount": 1000000,
+      "period": "year",
+      "upTo": true
+    }
+  ],
+  "rules": [],
+  "additionalConditions": false,
+  "documents": [
+    "aadhaar",
+    "id_proof"
+  ],
+  "apply": {
+    "channels": [
+      "csc"
+    ],
+    "steps": [],
+    "url": "https://sha.punjab.gov.in/shapunjab/index.php"
+  },
+  "sources": [
+    {
+      "title": "State Health Agency Punjab",
+      "url": "https://sha.punjab.gov.in/shapunjab/index.php",
+      "publisher": "Government of Punjab",
+      "accessed": "2026-10-03"
+    },
+    {
+      "title": "myScheme: Mukhmantri Sehat Bima Yojana",
+      "url": "https://www.myscheme.gov.in/schemes/mmsby",
+      "publisher": "myScheme (MeitY / NeGD)",
+      "accessed": "2026-10-03"
+    }
+  ],
+  "lastVerified": "2026-10-03",
+  "keywords": [
+    "health insurance",
+    "hospital",
+    "cashless treatment",
+    "sehat bima",
+    "medical"
+  ],
+  "dataVersion": 3,
+  "updatedOn": "2026-10-03",
+  "lifecycle": "published",
+  "verification": {
+    "level": "automated",
+    "by": "ingest-pipeline",
+    "on": "2026-10-03",
+    "method": "Claims matched against fetched official source text (keyword/number evidence). Not checked by a person."
+  },
+  "history": [
+    {
+      "version": 1,
+      "date": "2026-10-03",
+      "lifecycle": "pending-verification",
+      "change": "Initial record from official sources read during development.",
+      "by": "dev-assistant"
+    },
+    {
+      "version": 2,
+      "date": "2026-10-03",
+      "lifecycle": "published",
+      "change": "Passed the automated publication gate (official sources, claim citations, no open discrepancy, current).",
+      "by": "ingest-pipeline"
+    },
+    {
+      "version": 3,
+      "date": "2026-10-03",
+      "lifecycle": "published",
+      "change": "Rewritten from the State Health Agency Punjab page: cover is up to INR 10 lakh per family per year for all bona fide Punjab residents (earlier INR 5 lakh, limited categories); enrolment via CSCs with Aadhaar and Voter ID. The older myScheme-based eligibility groups were removed.",
+      "by": "maintainer-audit"
+    }
+  ],
+  "citations": [
+    {
+      "claim": "benefit:0",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "to provide cashless treatment up to ₹10 lakh per family per year to all 3 crore residents",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:aadhaar",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "Enrollment is simple and accessible through CSCs using Aadhaar and Voter ID.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:id_proof",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "Enrollment is simple and accessible through CSCs using Aadhaar and Voter ID.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "Home | State Health Agency | Punjab",
+      "readOn": "2026-10-03"
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "id": "rj-maa-yojana",
+  "level": "state",
+  "stateCodes": [
+    "RJ"
+  ],
+  "names": {
+    "en": "Mukhyamantri Ayushman Arogya (MAA) Yojana"
+  },
+  "department": "Government of Rajasthan",
+  "categories": [
+    "healthcare",
+    "insurance"
+  ],
+  "benefits": [
+    {
+      "type": "health_cover"
+    }
+  ],
+  "rules": [
+    {
+      "id": "notGovt",
+      "hard": false,
+      "rule": {
+        "fact": "occupation",
+        "op": "not_in",
+        "value": [
+          "govt_employee"
+        ]
+      }
+    }
+  ],
+  "additionalConditions": true,
+  "documents": [
+    "jan_aadhaar",
+    "aadhaar"
+  ],
+  "apply": {
+    "channels": [
+      "online_portal"
+    ],
+    "steps": [
+      "follow_official_steps"
+    ],
+    "url": "https://maayojana.rajasthan.gov.in/#/home"
+  },
+  "sources": [
+    {
+      "title": "MAA Yojana portal",
+      "url": "https://maayojana.rajasthan.gov.in/#/home",
+      "publisher": "Government of Rajasthan",
+      "accessed": "2026-10-03"
+    },
+    {
+      "title": "myScheme: Mukhyamantri Ayushman Aarogya Yojana",
+      "url": "https://www.myscheme.gov.in/schemes/maayr",
+      "publisher": "myScheme (MeitY / NeGD)",
+      "accessed": "2026-10-03"
+    }
+  ],
+  "lastVerified": "2026-10-03",
+  "keywords": [
+    "health insurance",
+    "hospital",
+    "cashless treatment",
+    "ayushman",
+    "medical"
+  ],
+  "dataVersion": 2,
+  "updatedOn": "2026-10-03",
+  "lifecycle": "published",
+  "verification": {
+    "level": "automated",
+    "by": "ingest-pipeline",
+    "on": "2026-10-03",
+    "method": "Claims matched against fetched official source text (keyword/number evidence). Not checked by a person."
+  },
+  "history": [
+    {
+      "version": 1,
+      "date": "2026-10-03",
+      "lifecycle": "pending-verification",
+      "change": "Initial record from official sources read during development.",
+      "by": "dev-assistant"
+    },
+    {
+      "version": 2,
+      "date": "2026-10-03",
+      "lifecycle": "published",
+      "change": "Passed the automated publication gate (official sources, claim citations, no open discrepancy, current).",
+      "by": "ingest-pipeline"
+    }
+  ],
+  "citations": [
+    {
+      "claim": "benefit:0",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Rajasthan’s Mukhyamantri Ayushman Arogya Yojana (launched 1 May 2021) provides cashless health insurance to reduce out-of-pocket expenses and ensure quality treatment through government and empanelled private hospitals.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:notGovt",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Those other families of the state who are not government employees/pensioners, i.e.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:jan_aadhaar",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "For registration, beneficiaries must have their Aadhaar card/JAN Aadhaar card number/JAN Aadhaar card registration receipt number and Aadhaar card number.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:aadhaar",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "For registration, beneficiaries must have their Aadhaar card/JAN Aadhaar card number/JAN Aadhaar card registration receipt number and Aadhaar card number.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "मुख्यमंत्री आयुष्मान आरोग्य योजना, राजस्थान सरकार।",
+      "readOn": "2026-10-03"
+    }
+  ]
+}

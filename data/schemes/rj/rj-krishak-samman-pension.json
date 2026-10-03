@@ -1,0 +1,235 @@
+{
+  "id": "rj-krishak-samman-pension",
+  "level": "state",
+  "stateCodes": [
+    "RJ"
+  ],
+  "names": {
+    "en": "Suraksha Laghu evam Simant Vriddhajan Krishak Samman Pension Yojana"
+  },
+  "department": "Government of Rajasthan",
+  "categories": [
+    "pension",
+    "agriculture",
+    "senior_citizens"
+  ],
+  "benefits": [
+    {
+      "type": "pension",
+      "amount": 1000,
+      "period": "month",
+      "upTo": true
+    }
+  ],
+  "rules": [
+    {
+      "id": "farmer",
+      "hard": true,
+      "rule": {
+        "fact": "farmer",
+        "op": "is",
+        "value": true
+      }
+    },
+    {
+      "id": "age",
+      "hard": true,
+      "anyOf": [
+        {
+          "all": [
+            {
+              "fact": "gender",
+              "op": "eq",
+              "value": "female"
+            },
+            {
+              "fact": "age",
+              "op": "gte",
+              "value": 56
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "fact": "gender",
+              "op": "eq",
+              "value": "male"
+            },
+            {
+              "fact": "age",
+              "op": "gte",
+              "value": 59
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "additionalConditions": true,
+  "documents": [
+    "aadhaar",
+    "jan_aadhaar",
+    "bank_account_details",
+    "photograph"
+  ],
+  "apply": {
+    "channels": [
+      "online_portal"
+    ],
+    "steps": [
+      "visit_portal",
+      "register_login",
+      "enter_details",
+      "submit_form"
+    ],
+    "url": "https://sso.rajasthan.gov.in/signin"
+  },
+  "sources": [
+    {
+      "title": "Rajasthan SSO portal",
+      "url": "https://sso.rajasthan.gov.in/signin",
+      "publisher": "Government of Rajasthan",
+      "accessed": "2026-10-03"
+    },
+    {
+      "title": "myScheme: Suraksha Laghu Evan Simant Vriddhajan Krishak Samman Pension Yojana",
+      "url": "https://www.myscheme.gov.in/schemes/slesvkspy",
+      "publisher": "myScheme (MeitY / NeGD)",
+      "accessed": "2026-10-03"
+    }
+  ],
+  "lastVerified": "2026-10-03",
+  "keywords": [
+    "farmer pension",
+    "small farmer",
+    "marginal farmer",
+    "elderly farmer",
+    "kisan pension"
+  ],
+  "dataVersion": 2,
+  "updatedOn": "2026-10-03",
+  "lifecycle": "published",
+  "verification": {
+    "level": "automated",
+    "by": "ingest-pipeline",
+    "on": "2026-10-03",
+    "method": "Claims matched against fetched official source text (keyword/number evidence). Not checked by a person."
+  },
+  "history": [
+    {
+      "version": 1,
+      "date": "2026-10-03",
+      "lifecycle": "pending-verification",
+      "change": "Initial record from official sources read during development.",
+      "by": "dev-assistant"
+    },
+    {
+      "version": 2,
+      "date": "2026-10-03",
+      "lifecycle": "published",
+      "change": "Passed the automated publication gate (official sources, claim citations, no open discrepancy, current).",
+      "by": "ingest-pipeline"
+    }
+  ],
+  "citations": [
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "benefit:0",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "To pensioners aged 75 years and above : ₹1,000/- per month",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:farmer",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "The Rajasthan government has introduced the \"Suraksha Laghu Evam Simaant Vriddhajan Krishak Samman Pension Yojana\" to uplift the lives of small and marginal farmers in the state.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:age",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "The female applicant's age should be more than 55 years and the male more than 58 years.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:aadhaar",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Step-4: Choose the either one option from the Jan Aadhaar Or Google to process further.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:jan_aadhaar",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Step-4: Choose the either one option from the Jan Aadhaar Or Google to process further.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:bank_account_details",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "- Bank Details.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:photograph",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Applicant - Passport-size photo.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "id": "cen-kcc",
+  "level": "central",
+  "stateCodes": [],
+  "names": {
+    "en": "Kisan Credit Card (KCC)"
+  },
+  "department": "Ministry of Agriculture and Farmers Welfare",
+  "categories": [
+    "agriculture",
+    "finance"
+  ],
+  "benefits": [
+    {
+      "type": "loan"
+    }
+  ],
+  "rules": [
+    {
+      "id": "farmer",
+      "hard": true,
+      "rule": {
+        "fact": "farmer",
+        "op": "is",
+        "value": true
+      }
+    }
+  ],
+  "additionalConditions": true,
+  "documents": [
+    "photograph",
+    "id_proof",
+    "residence_proof",
+    "land_records"
+  ],
+  "apply": {
+    "channels": [
+      "bank_branch",
+      "online_portal"
+    ],
+    "steps": [
+      "visit_portal",
+      "fill_form",
+      "submit_form",
+      "track_status"
+    ]
+  },
+  "sources": [
+    {
+      "title": "myScheme: Kisan Credit Card",
+      "url": "https://www.myscheme.gov.in/schemes/kcc",
+      "publisher": "myScheme (MeitY / NeGD)",
+      "accessed": "2026-10-03"
+    }
+  ],
+  "lastVerified": "2026-10-03",
+  "keywords": [
+    "farmer",
+    "credit card",
+    "crop loan",
+    "agriculture credit",
+    "kisan"
+  ],
+  "dataVersion": 2,
+  "updatedOn": "2026-10-03",
+  "lifecycle": "published",
+  "verification": {
+    "level": "automated",
+    "by": "ingest-pipeline",
+    "on": "2026-10-03",
+    "method": "Claims matched against fetched official source text (keyword/number evidence). Not checked by a person."
+  },
+  "history": [
+    {
+      "version": 1,
+      "date": "2026-10-03",
+      "lifecycle": "pending-verification",
+      "change": "Initial record from official sources read during development.",
+      "by": "dev-assistant"
+    },
+    {
+      "version": 2,
+      "date": "2026-10-03",
+      "lifecycle": "published",
+      "change": "Passed the automated publication gate (official sources, claim citations, no open discrepancy, current).",
+      "by": "ingest-pipeline"
+    }
+  ],
+  "citations": [
+    {
+      "claim": "benefit:0",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "Limit for second & subsequent year: First-year limit for crop cultivation purposes arrived at as above plus 10% of the limit towards cost escalation/increase in the scale of finance for every successive year ( 2nd, 3rd, 4th and 5th year) an",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:farmer",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "Kisan Credit Card",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:photograph",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "Two Passport Size Photographs.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:id_proof",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "ID proof such as Driving License / Aadhar Card / Voter Identity Card / Passport.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:residence_proof",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "Address Proof such as Driving License, Aadhar Card.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:land_records",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "Term loans for investments towards land development, minor irrigation, purchase of farm equipment and allied agricultural activities.",
+      "readOn": "2026-10-03"
+    }
+  ]
+}

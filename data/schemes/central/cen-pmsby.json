@@ -1,0 +1,133 @@
+{
+  "id": "cen-pmsby",
+  "level": "central",
+  "stateCodes": [],
+  "names": {
+    "en": "Pradhan Mantri Suraksha Bima Yojana (PMSBY)"
+  },
+  "department": "Ministry of Finance",
+  "categories": [
+    "insurance",
+    "finance"
+  ],
+  "benefits": [
+    {
+      "type": "insurance_cover",
+      "amount": 200000,
+      "period": "year"
+    }
+  ],
+  "rules": [
+    {
+      "id": "age",
+      "hard": true,
+      "rule": {
+        "fact": "age",
+        "op": "between",
+        "value": [
+          18,
+          70
+        ]
+      }
+    },
+    {
+      "id": "bank",
+      "hard": true,
+      "rule": {
+        "fact": "hasBankAccount",
+        "op": "is",
+        "value": true
+      }
+    }
+  ],
+  "additionalConditions": false,
+  "documents": [],
+  "apply": {
+    "channels": [
+      "bank_branch"
+    ],
+    "steps": [
+      "fill_form",
+      "visit_office",
+      "submit_form",
+      "collect_acknowledgement"
+    ],
+    "url": "https://jansuraksha.gov.in/"
+  },
+  "sources": [
+    {
+      "title": "Jan Suraksha portal",
+      "url": "https://jansuraksha.gov.in/",
+      "publisher": "Department of Financial Services",
+      "accessed": "2026-10-03"
+    },
+    {
+      "title": "myScheme: PMSBY",
+      "url": "https://www.myscheme.gov.in/schemes/pmsby",
+      "publisher": "myScheme (MeitY / NeGD)",
+      "accessed": "2026-10-03"
+    }
+  ],
+  "lastVerified": "2026-10-03",
+  "keywords": [
+    "accident insurance",
+    "disability cover",
+    "accidental death",
+    "bank account insurance"
+  ],
+  "dataVersion": 2,
+  "updatedOn": "2026-10-03",
+  "lifecycle": "published",
+  "verification": {
+    "level": "automated",
+    "by": "ingest-pipeline",
+    "on": "2026-10-03",
+    "method": "Claims matched against fetched official source text (keyword/number evidence). Not checked by a person."
+  },
+  "history": [
+    {
+      "version": 1,
+      "date": "2026-10-03",
+      "lifecycle": "pending-verification",
+      "change": "Initial record from official sources read during development.",
+      "by": "dev-assistant"
+    },
+    {
+      "version": 2,
+      "date": "2026-10-03",
+      "lifecycle": "published",
+      "change": "Passed the automated publication gate (official sources, claim citations, no open discrepancy, current).",
+      "by": "ingest-pipeline"
+    }
+  ],
+  "citations": [
+    {
+      "claim": "benefit:0",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "In case a member is covered under PMSBY through more than one account and premium is received by insurance company inadvertently, insurance cover will be restricted to Rs 2 lakh.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:age",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Individual bank account holders of participating banks aged between 18 years (completed) and 70 years (age nearer birthday) who give their consent to join / enable auto-debit, will be enrolled into the scheme.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:bank",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Accident InsuranceBank Account HoldersDeath InsuranceInsurance",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Step 01: In order to enrol in PMSBY offline, one can visit the bank branch where one has a savings account or the candidate can visit the official site: https://jansuraksha.gov.in/Forms-PMSBY.aspx to download the form.",
+      "readOn": "2026-10-03"
+    }
+  ]
+}

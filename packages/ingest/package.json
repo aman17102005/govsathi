@@ -1,0 +1,17 @@
+{
+  "name": "@govsathi/ingest",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@govsathi/shared": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4"
+  }
+}

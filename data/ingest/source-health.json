@@ -1,0 +1,191 @@
+{
+  "https://www.punjab.gov.in/sitemap.xml": {
+    "url": "https://www.punjab.gov.in/sitemap.xml",
+    "lastAttempt": "2026-10-03T09:48:04.083Z",
+    "lastStatus": "error",
+    "lastError": "robots.txt does not allow /sitemap.xml",
+    "consecutiveFailures": 3
+  },
+  "https://rajasthan.gov.in/sitemap.xml": {
+    "url": "https://rajasthan.gov.in/sitemap.xml",
+    "lastAttempt": "2026-10-03T10:16:54.344Z",
+    "lastOk": "2026-10-03T10:16:54.344Z",
+    "lastStatus": "ok",
+    "consecutiveFailures": 0
+  },
+  "https://pmkisan.gov.in/": {
+    "url": "https://pmkisan.gov.in/",
+    "lastAttempt": "2026-10-03T10:15:14.706Z",
+    "lastStatus": "robots",
+    "lastError": "robots.txt does not allow /",
+    "consecutiveFailures": 8
+  },
+  "https://pmsvanidhi.mohua.gov.in/": {
+    "url": "https://pmsvanidhi.mohua.gov.in/",
+    "lastAttempt": "2026-10-03T10:15:19.943Z",
+    "lastOk": "2026-10-03T10:15:19.943Z",
+    "lastStatus": "ok",
+    "consecutiveFailures": 0
+  },
+  "https://pmvishwakarma.gov.in/": {
+    "url": "https://pmvishwakarma.gov.in/",
+    "lastAttempt": "2026-10-03T10:15:24.522Z",
+    "lastOk": "2026-10-03T10:15:24.522Z",
+    "lastStatus": "ok",
+    "consecutiveFailures": 0
+  },
+  "https://pmaymis.gov.in/": {
+    "url": "https://pmaymis.gov.in/",
+    "lastAttempt": "2026-10-03T10:15:28.584Z",
+    "lastOk": "2026-10-03T10:15:28.584Z",
+    "lastStatus": "ok",
+    "consecutiveFailures": 0
+  },
+  "https://www.kviconline.gov.in/pmegpeportal/pmegphome/index.jsp": {
+    "url": "https://www.kviconline.gov.in/pmegpeportal/pmegphome/index.jsp",
+    "lastAttempt": "2026-10-03T10:15:31.938Z",
+    "lastStatus": "robots",
+    "lastError": "robots.txt does not allow /pmegpeportal/pmegphome/index.jsp",
+    "consecutiveFailures": 8
+  },
+  "https://pmfby.gov.in/": {
+    "url": "https://pmfby.gov.in/",
+    "lastAttempt": "2026-10-03T10:15:48.178Z",
+    "lastOk": "2026-10-03T10:15:48.178Z",
+    "lastStatus": "ok",
+    "consecutiveFailures": 0
+  },
+  "https://jansuraksha.gov.in/": {
+    "url": "https://jansuraksha.gov.in/",
+    "lastAttempt": "2026-10-03T10:16:01.875Z",
+    "lastStatus": "robots",
+    "lastError": "robots.txt does not allow /",
+    "consecutiveFailures": 16
+  },
+  "https://pmmvy.wcd.gov.in/": {
+    "url": "https://pmmvy.wcd.gov.in/",
+    "lastAttempt": "2026-10-03T10:15:55.963Z",
+    "lastOk": "2026-10-03T10:15:55.963Z",
+    "lastStatus": "ok",
+    "consecutiveFailures": 0
+  },
+  "https://www.mudra.org.in/": {
+    "url": "https://www.mudra.org.in/",
+    "lastAttempt": "2026-10-03T10:16:01.874Z",
+    "lastStatus": "error",
+    "lastError": "host not on the official allow-list: www.mudra.org.in",
+    "consecutiveFailures": 8
+  },
+  "https://www.pmuy.gov.in/": {
+    "url": "https://www.pmuy.gov.in/",
+    "lastAttempt": "2026-10-03T10:16:01.875Z",
+    "lastOk": "2026-10-03T10:16:01.875Z",
+    "lastStatus": "ok",
+    "consecutiveFailures": 0
+  },
+  "https://ashirwad.punjab.gov.in/ashirwad/": {
+    "url": "https://ashirwad.punjab.gov.in/ashirwad/",
+    "lastAttempt": "2026-10-03T10:16:12.175Z",
+    "lastOk": "2026-10-03T10:16:12.175Z",
+    "lastStatus": "ok",
+    "consecutiveFailures": 0
+  },
+  "https://sswcd.punjab.gov.in/en/bebe-nanki-laadli-beti-kalyan-scheme": {
+    "url": "https://sswcd.punjab.gov.in/en/bebe-nanki-laadli-beti-kalyan-scheme",
+    "lastAttempt": "2026-10-03T10:16:15.226Z",
+    "lastStatus": "robots",
+    "lastError": "robots.txt does not allow /en/bebe-nanki-laadli-beti-kalyan-scheme",
+    "consecutiveFailures": 8
+  },
+  "https://sswcd.punjab.gov.in/en/concessional-bus-travel-facility-to-women-above-60-years-of-age": {
+    "url": "https://sswcd.punjab.gov.in/en/concessional-bus-travel-facility-to-women-above-60-years-of-age",
+    "lastAttempt": "2026-10-03T10:16:20.293Z",
+    "lastStatus": "robots",
+    "lastError": "robots.txt does not allow /en/concessional-bus-travel-facility-to-women-above-60-years-of-age",
+    "consecutiveFailures": 8
+  },
+  "https://connect.punjab.gov.in/service/citizenservice/114": {
+    "url": "https://connect.punjab.gov.in/service/citizenservice/114",
+    "lastAttempt": "2026-10-03T10:16:20.293Z",
+    "lastOk": "2026-10-03T10:16:20.293Z",
+    "lastStatus": "ok",
+    "consecutiveFailures": 0
+  },
+  "https://sswcd.punjab.gov.in/en/wcd/state-schemes": {
+    "url": "https://sswcd.punjab.gov.in/en/wcd/state-schemes",
+    "lastAttempt": "2026-10-03T10:16:22.846Z",
+    "lastStatus": "robots",
+    "lastError": "robots.txt does not allow /en/wcd/state-schemes",
+    "consecutiveFailures": 8
+  },
+  "https://sha.punjab.gov.in/shapunjab/index.php": {
+    "url": "https://sha.punjab.gov.in/shapunjab/index.php",
+    "lastAttempt": "2026-10-03T10:16:22.847Z",
+    "lastOk": "2026-10-03T10:16:22.847Z",
+    "lastStatus": "ok",
+    "consecutiveFailures": 0
+  },
+  "https://connect.punjab.gov.in/service/citizenservice/108": {
+    "url": "https://connect.punjab.gov.in/service/citizenservice/108",
+    "lastAttempt": "2026-10-03T10:16:25.450Z",
+    "lastOk": "2026-10-03T10:16:25.450Z",
+    "lastStatus": "ok",
+    "consecutiveFailures": 0
+  },
+  "https://www.scholarships.punjab.gov.in/": {
+    "url": "https://www.scholarships.punjab.gov.in/",
+    "lastAttempt": "2026-10-03T10:16:25.501Z",
+    "lastStatus": "robots",
+    "lastError": "robots.txt does not allow /",
+    "consecutiveFailures": 8
+  },
+  "https://connect.punjab.gov.in/service/citizenservice/112": {
+    "url": "https://connect.punjab.gov.in/service/citizenservice/112",
+    "lastAttempt": "2026-10-03T10:16:30.614Z",
+    "lastOk": "2026-10-03T10:16:30.614Z",
+    "lastStatus": "ok",
+    "consecutiveFailures": 0
+  },
+  "https://ssp.rajasthan.gov.in/": {
+    "url": "https://ssp.rajasthan.gov.in/",
+    "lastAttempt": "2026-10-03T10:16:51.674Z",
+    "lastOk": "2026-10-03T10:16:51.674Z",
+    "lastStatus": "ok",
+    "consecutiveFailures": 0
+  },
+  "https://rajshaladarpan.nic.in/sd3/Home/BSF/Index.aspx": {
+    "url": "https://rajshaladarpan.nic.in/sd3/Home/BSF/Index.aspx",
+    "lastAttempt": "2026-10-03T10:16:36.272Z",
+    "lastStatus": "robots",
+    "lastError": "robots.txt does not allow /sd3/Home/BSF/Index.aspx",
+    "consecutiveFailures": 8
+  },
+  "https://hte.rajasthan.gov.in/scholarship/0303202101.pdf": {
+    "url": "https://hte.rajasthan.gov.in/scholarship/0303202101.pdf",
+    "lastAttempt": "2026-10-03T10:16:41.278Z",
+    "lastStatus": "robots",
+    "lastError": "robots.txt does not allow /scholarship/0303202101.pdf",
+    "consecutiveFailures": 8
+  },
+  "https://sso.rajasthan.gov.in/signin": {
+    "url": "https://sso.rajasthan.gov.in/signin",
+    "lastAttempt": "2026-10-03T10:16:48.902Z",
+    "lastStatus": "robots",
+    "lastError": "robots.txt does not allow /signin",
+    "consecutiveFailures": 8
+  },
+  "https://maayojana.rajasthan.gov.in/#/home": {
+    "url": "https://maayojana.rajasthan.gov.in/#/home",
+    "lastAttempt": "2026-10-03T10:16:49.102Z",
+    "lastOk": "2026-10-03T10:16:49.102Z",
+    "lastStatus": "ok",
+    "consecutiveFailures": 0
+  },
+  "https://www.pmuy.gov.in/faq.html": {
+    "url": "https://www.pmuy.gov.in/faq.html",
+    "lastAttempt": "2026-10-03T10:16:01.875Z",
+    "lastOk": "2026-10-03T10:16:01.875Z",
+    "lastStatus": "ok",
+    "consecutiveFailures": 0
+  }
+}

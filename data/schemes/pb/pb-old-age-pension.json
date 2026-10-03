@@ -1,0 +1,201 @@
+{
+  "id": "pb-old-age-pension",
+  "level": "state",
+  "stateCodes": [
+    "PB"
+  ],
+  "names": {
+    "en": "Old Age Pension Scheme"
+  },
+  "department": "Government of Punjab",
+  "categories": [
+    "pension",
+    "senior_citizens",
+    "social_welfare"
+  ],
+  "benefits": [
+    {
+      "type": "pension",
+      "amount": 1500,
+      "period": "month"
+    }
+  ],
+  "rules": [
+    {
+      "id": "age",
+      "hard": true,
+      "anyOf": [
+        {
+          "all": [
+            {
+              "fact": "gender",
+              "op": "eq",
+              "value": "male"
+            },
+            {
+              "fact": "age",
+              "op": "gte",
+              "value": 65
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "fact": "gender",
+              "op": "eq",
+              "value": "female"
+            },
+            {
+              "fact": "age",
+              "op": "gte",
+              "value": 58
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "income",
+      "hard": true,
+      "rule": {
+        "fact": "personalIncome",
+        "op": "lte",
+        "value": 60000
+      }
+    }
+  ],
+  "additionalConditions": true,
+  "documents": [
+    "id_proof",
+    "residence_proof",
+    "bank_account_details",
+    "age_proof",
+    "self_declaration"
+  ],
+  "apply": {
+    "channels": [
+      "online_portal"
+    ],
+    "steps": [
+      "visit_portal",
+      "register_login",
+      "fill_form",
+      "upload_documents",
+      "submit_form"
+    ],
+    "url": "https://connect.punjab.gov.in/service/citizenservice/108"
+  },
+  "sources": [
+    {
+      "title": "Digital Punjab service page",
+      "url": "https://connect.punjab.gov.in/service/citizenservice/108",
+      "publisher": "Government of Punjab",
+      "accessed": "2026-10-03"
+    },
+    {
+      "title": "myScheme: Old Age Pension Scheme – Punjab",
+      "url": "https://www.myscheme.gov.in/schemes/oapsp",
+      "publisher": "myScheme (MeitY / NeGD)",
+      "accessed": "2026-10-03"
+    }
+  ],
+  "lastVerified": "2026-10-03",
+  "keywords": [
+    "old age",
+    "senior citizen",
+    "elderly",
+    "pension",
+    "bujurg"
+  ],
+  "dataVersion": 2,
+  "updatedOn": "2026-10-03",
+  "lifecycle": "published",
+  "verification": {
+    "level": "automated",
+    "by": "ingest-pipeline",
+    "on": "2026-10-03",
+    "method": "Claims matched against fetched official source text (keyword/number evidence). Not checked by a person."
+  },
+  "history": [
+    {
+      "version": 1,
+      "date": "2026-10-03",
+      "lifecycle": "pending-verification",
+      "change": "Initial record from official sources read during development.",
+      "by": "dev-assistant"
+    },
+    {
+      "version": 2,
+      "date": "2026-10-03",
+      "lifecycle": "published",
+      "change": "Passed the automated publication gate (official sources, claim citations, no open discrepancy, current).",
+      "by": "ingest-pipeline"
+    }
+  ],
+  "citations": [
+    {
+      "claim": "benefit:0",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Amount : ₹ 1,500/- per month",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:age",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Men: 65 Years or Above.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:income",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "The Annual Income of Beneficiary should not be more than Rs 60,000/- per year.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:id_proof",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Proof of Identity.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:residence_proof",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Beneficiary should be a Permanent Resident of Punjab.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:bank_account_details",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "its a DBT scheme so pension amount will directly transferred in the bank account of beneficiary.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:age_proof",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Proof of date of birth of Beneficiary.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:self_declaration",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Self-declaration.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "Connect Punjab",
+      "readOn": "2026-10-03"
+    }
+  ]
+}

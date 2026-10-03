@@ -1,0 +1,197 @@
+{
+  "id": "cen-pmay-g",
+  "level": "central",
+  "stateCodes": [],
+  "names": {
+    "en": "Pradhan Mantri Awaas Yojana – Gramin (PMAY-G)"
+  },
+  "department": "Ministry of Rural Development",
+  "categories": [
+    "housing"
+  ],
+  "benefits": [
+    {
+      "type": "subsidy"
+    }
+  ],
+  "rules": [
+    {
+      "id": "rural",
+      "hard": true,
+      "rule": {
+        "fact": "area",
+        "op": "eq",
+        "value": "rural"
+      }
+    },
+    {
+      "id": "house",
+      "hard": false,
+      "rule": {
+        "fact": "housing",
+        "op": "in",
+        "value": [
+          "none",
+          "own_kutcha"
+        ]
+      }
+    }
+  ],
+  "additionalConditions": true,
+  "documents": [
+    "aadhaar",
+    "job_card",
+    "bank_account_details",
+    "self_declaration"
+  ],
+  "apply": {
+    "channels": [
+      "gram_panchayat",
+      "online_portal"
+    ],
+    "steps": [
+      "follow_official_steps"
+    ],
+    "url": "https://pmayg.nic.in/"
+  },
+  "sources": [
+    {
+      "title": "myScheme: Pradhan Mantri Awaas Yojana – Gramin",
+      "url": "https://www.myscheme.gov.in/schemes/pmay-g",
+      "publisher": "myScheme (MeitY / NeGD)",
+      "accessed": "2026-10-03"
+    },
+    {
+      "title": "PIB: Cabinet approves implementation of PMAY-G (FY 2024-25 to 2028-29)",
+      "url": "https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=2043921&reg=3&lang=2",
+      "publisher": "Press Information Bureau",
+      "accessed": "2026-10-03"
+    }
+  ],
+  "lastVerified": "2026-10-03",
+  "keywords": [
+    "house",
+    "home",
+    "rural housing",
+    "kutcha house",
+    "awas",
+    "shelter"
+  ],
+  "dataVersion": 3,
+  "updatedOn": "2026-10-03",
+  "lifecycle": "pending-verification",
+  "verification": {
+    "level": "unverified",
+    "by": "migration",
+    "on": "2026-10-03",
+    "method": "Record created 2026-10-03 from official pages read during development; not yet checked by the verification pipeline."
+  },
+  "history": [
+    {
+      "version": 1,
+      "date": "2026-10-03",
+      "lifecycle": "pending-verification",
+      "change": "Initial record from official sources read during development.",
+      "by": "dev-assistant"
+    },
+    {
+      "version": 2,
+      "date": "2026-10-03",
+      "lifecycle": "pending-verification",
+      "change": "Scheme period updated from the Cabinet decision (myScheme text was stale).",
+      "by": "maintainer-audit"
+    },
+    {
+      "version": 3,
+      "date": "2026-10-03",
+      "lifecycle": "pending-verification",
+      "change": "Placed on hold: continuation beyond March 2026 not yet confirmed.",
+      "by": "maintainer-audit"
+    }
+  ],
+  "citations": [
+    {
+      "claim": "benefit:0",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "The maximum principal amount for which subsidy can be sought is ₹ 2,00,000.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:rural",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "Ministry Of Rural Development",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:house",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "PMAY-G aims at providing a pucca house, with basic amenities, to all houseless households and those households living in kutcha and dilapidated house.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:aadhaar",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "The amount is transferred directly to the Aadhaar-Linked Bank Account / Post-Office Account of the beneficiary.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:job_card",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "In the next section, enter the MGNREGA job card number and Swachh Bharat Mission (SBM) number of the beneficiary",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:bank_account_details",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "The amount is transferred directly to the Aadhaar-Linked Bank Account / Post-Office Account of the beneficiary.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:self_declaration",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "Affidavit stating the beneficiaries, or their family members do not own a pucca house.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "Beneficiary Registration Manual - https://pmayg.nic.in/netiayHome/Document/Document-PMAYG-Registratio-Manual.pdf",
+      "readOn": "2026-10-03"
+    }
+  ],
+  "validity": {
+    "endDate": "2029-03-31",
+    "src": 1
+  },
+  "discrepancies": [
+    {
+      "field": "validity.endDate",
+      "values": [
+        {
+          "src": 1,
+          "value": "continuation approved to March 2029"
+        },
+        {
+          "src": 0,
+          "value": "extended till 31 March 2024 (stale myScheme text)"
+        }
+      ],
+      "used": 1,
+      "resolution": "The Cabinet release is newer and authoritative for the scheme period.",
+      "status": "resolved",
+      "foundOn": "2026-10-03"
+    }
+  ],
+  "hold": {
+    "reason": "The Cabinet decision approves PMAY-G to March 2029 but makes continuation beyond March 2026 subject to NITI Aayog evaluation and EFC re-appraisal; no official confirmation of continuation after March 2026 has been recorded yet.",
+    "since": "2026-10-03"
+  }
+}

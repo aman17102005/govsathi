@@ -1,0 +1,238 @@
+{
+  "id": "cen-pmmvy",
+  "level": "central",
+  "stateCodes": [],
+  "names": {
+    "en": "Pradhan Mantri Matru Vandana Yojana (PMMVY)"
+  },
+  "department": "Ministry of Women and Child Development",
+  "categories": [
+    "women",
+    "healthcare",
+    "children"
+  ],
+  "benefits": [
+    {
+      "type": "cash",
+      "amount": 5000,
+      "period": "once"
+    }
+  ],
+  "rules": [
+    {
+      "id": "woman",
+      "hard": true,
+      "rule": {
+        "fact": "gender",
+        "op": "eq",
+        "value": "female"
+      }
+    },
+    {
+      "id": "age",
+      "hard": true,
+      "rule": {
+        "fact": "age",
+        "op": "gte",
+        "value": 19
+      }
+    },
+    {
+      "id": "pregnant",
+      "hard": true,
+      "rule": {
+        "fact": "pregnantOrLactating",
+        "op": "is",
+        "value": true
+      }
+    },
+    {
+      "id": "notGovt",
+      "hard": true,
+      "rule": {
+        "fact": "occupation",
+        "op": "not_in",
+        "value": [
+          "govt_employee"
+        ]
+      }
+    },
+    {
+      "id": "disadvantaged",
+      "hard": true,
+      "anyOf": [
+        {
+          "fact": "category",
+          "op": "in",
+          "value": [
+            "sc",
+            "st"
+          ]
+        },
+        {
+          "fact": "disability",
+          "op": "is",
+          "value": true
+        },
+        {
+          "fact": "bpl",
+          "op": "is",
+          "value": true
+        },
+        {
+          "fact": "familyIncome",
+          "op": "lte",
+          "value": 800000
+        }
+      ]
+    }
+  ],
+  "additionalConditions": true,
+  "documents": [
+    "aadhaar",
+    "bank_account_details",
+    "pregnancy_records",
+    "birth_certificate"
+  ],
+  "apply": {
+    "channels": [
+      "online_portal",
+      "anganwadi"
+    ],
+    "steps": [
+      "visit_portal",
+      "register_login",
+      "enter_details",
+      "upload_documents",
+      "submit_form"
+    ],
+    "url": "https://pmmvy.wcd.gov.in/"
+  },
+  "sources": [
+    {
+      "title": "PMMVY official portal",
+      "url": "https://pmmvy.wcd.gov.in/",
+      "publisher": "Ministry of Women & Child Development",
+      "accessed": "2026-10-03"
+    },
+    {
+      "title": "myScheme: Pradhan Mantri Matru Vandana Yojana",
+      "url": "https://www.myscheme.gov.in/schemes/pmmvy",
+      "publisher": "myScheme (MeitY / NeGD)",
+      "accessed": "2026-10-03"
+    }
+  ],
+  "lastVerified": "2026-10-03",
+  "keywords": [
+    "pregnant",
+    "maternity",
+    "mother",
+    "newborn",
+    "maternity benefit",
+    "lactating"
+  ],
+  "dataVersion": 2,
+  "updatedOn": "2026-10-03",
+  "lifecycle": "published",
+  "verification": {
+    "level": "automated",
+    "by": "ingest-pipeline",
+    "on": "2026-10-03",
+    "method": "Claims matched against fetched official source text (keyword/number evidence). Not checked by a person."
+  },
+  "history": [
+    {
+      "version": 1,
+      "date": "2026-10-03",
+      "lifecycle": "pending-verification",
+      "change": "Initial record from official sources read during development.",
+      "by": "dev-assistant"
+    },
+    {
+      "version": 2,
+      "date": "2026-10-03",
+      "lifecycle": "published",
+      "change": "Passed the automated publication gate (official sources, claim citations, no open discrepancy, current).",
+      "by": "ingest-pipeline"
+    }
+  ],
+  "citations": [
+    {
+      "claim": "benefit:0",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "For the first child the maternity benefit of ₹5,000/- is provided in two instalments under PMMVY and the beneficiary is also entitled to receive the cash incentive as per approved norms towards Maternity Benefit under Janani Suraksha Yojana",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:woman",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "If you are facing any workplace related sexual harassment, please file your complaint here - SHe-Box | MINISTRY OF WOMEN & CHILD DEVELOPMENT | GOI",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:age",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "The applicant should be of at least 19 years old and a pregnant women.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:pregnant",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Cash IncentiveFinancial AssistanceGood NutritionMaternity Benefit ProgrammePregnant Women",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:notGovt",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "All pregnant women and lactating mothers in regular employment with the Central Government or State Government or Public Sector Undertaking or those who are in receipt of similar benefits under any law for the time being in force shall not ",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:disadvantaged",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Women belonging to scheduled castes and scheduled tribes",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:aadhaar",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "Aadhaar FaceRd",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:bank_account_details",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Aadhaar mapped bank/post office,",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:pregnancy_records",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Cash IncentiveFinancial AssistanceGood NutritionMaternity Benefit ProgrammePregnant Women",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:birth_certificate",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "For the second child, the benefit of ₹6,000/- is to be provided subject to second child is a girl child, in one installment after the birth.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "Pradhan Mantri Matru Vandana Yojana - Home",
+      "readOn": "2026-10-03"
+    }
+  ]
+}

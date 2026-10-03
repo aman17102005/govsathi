@@ -1,0 +1,200 @@
+{
+  "id": "cen-pm-kisan",
+  "level": "central",
+  "stateCodes": [],
+  "names": {
+    "en": "Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)"
+  },
+  "department": "Ministry of Agriculture and Farmers Welfare",
+  "categories": [
+    "agriculture",
+    "finance"
+  ],
+  "benefits": [
+    {
+      "type": "cash",
+      "amount": 6000,
+      "period": "year"
+    }
+  ],
+  "rules": [
+    {
+      "id": "landOwner",
+      "hard": true,
+      "rule": {
+        "fact": "landOwner",
+        "op": "is",
+        "value": true
+      }
+    },
+    {
+      "id": "noTax",
+      "hard": true,
+      "rule": {
+        "fact": "incomeTaxPayer",
+        "op": "is",
+        "value": false
+      }
+    }
+  ],
+  "additionalConditions": true,
+  "documents": [
+    "aadhaar",
+    "land_records",
+    "bank_account_details"
+  ],
+  "apply": {
+    "channels": [
+      "csc",
+      "online_portal"
+    ],
+    "steps": [
+      "visit_office",
+      "enter_details",
+      "upload_documents",
+      "submit_form",
+      "track_status"
+    ],
+    "url": "https://pmkisan.gov.in/"
+  },
+  "sources": [
+    {
+      "title": "PM-KISAN official portal",
+      "url": "https://pmkisan.gov.in/",
+      "publisher": "Ministry of Agriculture & Farmers Welfare",
+      "accessed": "2026-10-03"
+    },
+    {
+      "title": "myScheme: Pradhan Mantri Kisan Samman Nidhi",
+      "url": "https://www.myscheme.gov.in/schemes/pm-kisan",
+      "publisher": "myScheme (MeitY / NeGD)",
+      "accessed": "2026-10-03"
+    }
+  ],
+  "lastVerified": "2026-10-03",
+  "keywords": [
+    "farmer",
+    "kisan",
+    "income support",
+    "agriculture",
+    "land holding"
+  ],
+  "dataVersion": 2,
+  "updatedOn": "2026-10-03",
+  "lifecycle": "published",
+  "verification": {
+    "level": "automated",
+    "by": "ingest-pipeline",
+    "on": "2026-10-03",
+    "method": "Claims matched against fetched official source text (keyword/number evidence). Not checked by a person."
+  },
+  "history": [
+    {
+      "version": 1,
+      "date": "2026-10-03",
+      "lifecycle": "pending-verification",
+      "change": "Initial record from official sources read during development.",
+      "by": "dev-assistant"
+    },
+    {
+      "version": 2,
+      "date": "2026-10-03",
+      "lifecycle": "published",
+      "change": "Passed the automated publication gate (official sources, claim citations, no open discrepancy, current).",
+      "by": "ingest-pipeline"
+    }
+  ],
+  "citations": [
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "benefit:0",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Under the scheme an amount of ₹ 6000/- per year is released by the Central Government online directly into the bank accounts of the eligible farmers under Direct Benefit Transfer mode, subject to certain exclusions.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:landOwner",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "The scheme aims to supplement the financial needs of all landholding farmers’ families by procuring various inputs to ensure proper crop health and appropriate yields, commensurate with the anticipated farm income as well as for domestic ne",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:noTax",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "All Persons who paid Income Tax in last assessment year",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:aadhaar",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Aadhaar Card",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:land_records",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "The scheme aims to supplement the financial needs of all landholding farmers’ families by procuring various inputs to ensure proper crop health and appropriate yields, commensurate with the anticipated farm income as well as for domestic ne",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:bank_account_details",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Under the scheme an amount of ₹ 6000/- per year is released by the Central Government online directly into the bank accounts of the eligible farmers under Direct Benefit Transfer mode, subject to certain exclusions.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    }
+  ]
+}

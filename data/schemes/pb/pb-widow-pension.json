@@ -1,0 +1,189 @@
+{
+  "id": "pb-widow-pension",
+  "level": "state",
+  "stateCodes": [
+    "PB"
+  ],
+  "names": {
+    "en": "Widow / Destitute Women Pension Scheme"
+  },
+  "department": "Government of Punjab",
+  "categories": [
+    "pension",
+    "women",
+    "social_welfare"
+  ],
+  "benefits": [
+    {
+      "type": "pension",
+      "amount": 1500,
+      "period": "month"
+    }
+  ],
+  "rules": [
+    {
+      "id": "woman",
+      "hard": true,
+      "rule": {
+        "fact": "gender",
+        "op": "eq",
+        "value": "female"
+      }
+    },
+    {
+      "id": "income",
+      "hard": true,
+      "rule": {
+        "fact": "personalIncome",
+        "op": "lte",
+        "value": 60000
+      }
+    },
+    {
+      "id": "status",
+      "hard": true,
+      "anyOf": [
+        {
+          "all": [
+            {
+              "fact": "maritalStatus",
+              "op": "in",
+              "value": [
+                "widowed",
+                "divorced"
+              ]
+            },
+            {
+              "fact": "age",
+              "op": "lte",
+              "value": 57
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "fact": "maritalStatus",
+              "op": "eq",
+              "value": "single"
+            },
+            {
+              "fact": "age",
+              "op": "gte",
+              "value": 31
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "additionalConditions": true,
+  "documents": [
+    "age_proof",
+    "bank_account_details"
+  ],
+  "apply": {
+    "channels": [
+      "online_portal"
+    ],
+    "steps": [
+      "visit_portal",
+      "register_login",
+      "fill_form",
+      "upload_documents",
+      "submit_form"
+    ],
+    "url": "https://connect.punjab.gov.in/service/citizenservice/112"
+  },
+  "sources": [
+    {
+      "title": "Digital Punjab service page",
+      "url": "https://connect.punjab.gov.in/service/citizenservice/112",
+      "publisher": "Government of Punjab",
+      "accessed": "2026-10-03"
+    },
+    {
+      "title": "myScheme: Widow / Destitute Women Pension Scheme – Punjab",
+      "url": "https://www.myscheme.gov.in/schemes/wdwps",
+      "publisher": "myScheme (MeitY / NeGD)",
+      "accessed": "2026-10-03"
+    }
+  ],
+  "lastVerified": "2026-10-03",
+  "keywords": [
+    "widow",
+    "destitute woman",
+    "divorced",
+    "unmarried woman",
+    "pension"
+  ],
+  "dataVersion": 2,
+  "updatedOn": "2026-10-03",
+  "lifecycle": "published",
+  "verification": {
+    "level": "automated",
+    "by": "ingest-pipeline",
+    "on": "2026-10-03",
+    "method": "Claims matched against fetched official source text (keyword/number evidence). Not checked by a person."
+  },
+  "history": [
+    {
+      "version": 1,
+      "date": "2026-10-03",
+      "lifecycle": "pending-verification",
+      "change": "Initial record from official sources read during development.",
+      "by": "dev-assistant"
+    },
+    {
+      "version": 2,
+      "date": "2026-10-03",
+      "lifecycle": "published",
+      "change": "Passed the automated publication gate (official sources, claim citations, no open discrepancy, current).",
+      "by": "ingest-pipeline"
+    }
+  ],
+  "citations": [
+    {
+      "claim": "benefit:0",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Amount : ₹ 1,500/- per month",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:woman",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Widow / Destitute Women Pension Scheme - Punjab",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:income",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "The Annual Income of Beneficiary should not be more than Rs 60,000/-per year .",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:status",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Widow / Destitute Women Pension Scheme - Punjab",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:age_proof",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Date of Birth Proof of Widow/Destitute Women (Voter Card / Voter List / Matriculation certificate / Certificate from Registrar Birth & Death / Aadhaar Card)",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "Connect Punjab",
+      "readOn": "2026-10-03"
+    }
+  ]
+}

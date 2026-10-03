@@ -1,0 +1,248 @@
+{
+  "id": "cen-pmuy",
+  "level": "central",
+  "stateCodes": [],
+  "names": {
+    "en": "Pradhan Mantri Ujjwala Yojana (PMUY)"
+  },
+  "department": "Ministry of Petroleum and Natural Gas",
+  "categories": [
+    "women",
+    "social_welfare"
+  ],
+  "benefits": [
+    {
+      "type": "cash"
+    },
+    {
+      "type": "goods"
+    }
+  ],
+  "rules": [
+    {
+      "id": "woman",
+      "hard": true,
+      "rule": {
+        "fact": "gender",
+        "op": "eq",
+        "value": "female"
+      }
+    },
+    {
+      "id": "age",
+      "hard": true,
+      "rule": {
+        "fact": "age",
+        "op": "gte",
+        "value": 18
+      }
+    },
+    {
+      "id": "noLpg",
+      "hard": true,
+      "rule": {
+        "fact": "hasLpg",
+        "op": "is",
+        "value": false
+      }
+    },
+    {
+      "id": "poor",
+      "hard": false,
+      "rule": {
+        "fact": "bpl",
+        "op": "is",
+        "value": true
+      }
+    }
+  ],
+  "additionalConditions": true,
+  "documents": [
+    "aadhaar",
+    "ration_card",
+    "residence_proof",
+    "photograph",
+    "bank_account_details"
+  ],
+  "apply": {
+    "channels": [
+      "online_portal",
+      "gas_distributor"
+    ],
+    "steps": [
+      "visit_portal",
+      "enter_details",
+      "fill_form",
+      "submit_form"
+    ],
+    "url": "https://www.pmuy.gov.in/"
+  },
+  "sources": [
+    {
+      "title": "PMUY official portal",
+      "url": "https://www.pmuy.gov.in/",
+      "publisher": "Ministry of Petroleum & Natural Gas",
+      "accessed": "2026-10-03"
+    },
+    {
+      "title": "myScheme: Pradhan Mantri Ujjwala Yojana",
+      "url": "https://www.myscheme.gov.in/schemes/pmuy",
+      "publisher": "myScheme (MeitY / NeGD)",
+      "accessed": "2026-10-03"
+    },
+    {
+      "title": "PMUY FAQ (ministry portal)",
+      "url": "https://www.pmuy.gov.in/faq.html",
+      "publisher": "Ministry of Petroleum & Natural Gas",
+      "accessed": "2026-10-03"
+    }
+  ],
+  "lastVerified": "2026-10-03",
+  "keywords": [
+    "lpg",
+    "gas connection",
+    "cooking gas",
+    "ujjwala",
+    "free stove"
+  ],
+  "dataVersion": 3,
+  "updatedOn": "2026-10-03",
+  "discrepancies": [
+    {
+      "field": "benefits[0].amount",
+      "values": [
+        {
+          "src": 0,
+          "value": "INR 2,050 for a 14.2 kg connection (PMUY home page)"
+        },
+        {
+          "src": 2,
+          "value": "INR 1,600 for a 14.2 kg connection (PMUY FAQ page)"
+        },
+        {
+          "src": 1,
+          "value": "INR 1,600 (myScheme)"
+        }
+      ],
+      "resolution": "The ministry's own pages disagree (home page 2,050; FAQ page and a 2023 PIB answer 1,600), so no single ministry figure exists. The amount is withheld and the citizen is pointed to the official source until the ministry confirms which is current.",
+      "status": "resolved",
+      "foundOn": "2026-10-03"
+    }
+  ],
+  "lifecycle": "published",
+  "verification": {
+    "level": "automated",
+    "by": "ingest-pipeline",
+    "on": "2026-10-03",
+    "method": "Claims matched against fetched official source text (keyword/number evidence). Not checked by a person."
+  },
+  "history": [
+    {
+      "version": 1,
+      "date": "2026-10-03",
+      "lifecycle": "pending-verification",
+      "change": "Initial record from official sources read during development.",
+      "by": "dev-assistant"
+    },
+    {
+      "version": 2,
+      "date": "2026-10-03",
+      "lifecycle": "pending-verification",
+      "change": "Cash amount withheld because the ministry's own pages disagree (2,050 vs 1,600).",
+      "by": "maintainer-audit"
+    },
+    {
+      "version": 3,
+      "date": "2026-10-03",
+      "lifecycle": "published",
+      "change": "Passed the automated publication gate (official sources, claim citations, no open discrepancy, current).",
+      "by": "ingest-pipeline"
+    }
+  ],
+  "citations": [
+    {
+      "claim": "benefit:0",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "Cash assistance for PMUY connections is provided by Government of India - 2050 (for a connection 14.2kg cylinder/ 1300 for a 5 kg cylinder).",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "benefit:1",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "Additionally, All PMUY beneficiaries will be provided with first LPG refill and Stove (hotplate) both free of cost along with their deposit free connection by the Oil Marketing Companies (OMCs).",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:woman",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "The applicant must be a woman who has attained 18 years of age.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:age",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "The applicant must be a woman who has attained 18 years of age.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:noLpg",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "Where to Apply for LPG Connection",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:poor",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "The adult woman must belong to a poor household based on submission of a deprivation declaration (as per prescribed format).",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:aadhaar",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "Proof of Identity (Aadhaar copy of Applicant)",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:ration_card",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "The adult woman must belong to a poor household based on submission of a deprivation declaration (as per prescribed format).",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:residence_proof",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "Proof of Address (only in case Address in Aadhaar is different from currently residing address) (Self Declaration as per Annexure I for migrant applicants)",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:photograph",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Passport size photograph",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:bank_account_details",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "Bank Account details (Passbook copy/Cancelled cheque)",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "PMUY : Home",
+      "readOn": "2026-10-03"
+    }
+  ]
+}

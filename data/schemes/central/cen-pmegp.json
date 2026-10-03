@@ -1,0 +1,144 @@
+{
+  "id": "cen-pmegp",
+  "level": "central",
+  "stateCodes": [],
+  "names": {
+    "en": "Prime Minister’s Employment Generation Programme (PMEGP)"
+  },
+  "department": "Ministry of Micro, Small and Medium Enterprises",
+  "categories": [
+    "entrepreneurship",
+    "employment",
+    "finance"
+  ],
+  "benefits": [
+    {
+      "type": "subsidy"
+    }
+  ],
+  "rules": [
+    {
+      "id": "age",
+      "hard": true,
+      "rule": {
+        "fact": "age",
+        "op": "gte",
+        "value": 18
+      }
+    }
+  ],
+  "additionalConditions": true,
+  "documents": [
+    "caste_certificate",
+    "project_report",
+    "education_certificates",
+    "residence_proof"
+  ],
+  "apply": {
+    "channels": [
+      "online_portal"
+    ],
+    "steps": [
+      "visit_portal",
+      "fill_form",
+      "upload_documents",
+      "submit_form"
+    ],
+    "url": "https://www.kviconline.gov.in/pmegpeportal/pmegphome/index.jsp"
+  },
+  "sources": [
+    {
+      "title": "PMEGP e-portal",
+      "url": "https://www.kviconline.gov.in/pmegpeportal/pmegphome/index.jsp",
+      "publisher": "Khadi and Village Industries Commission",
+      "accessed": "2026-10-03"
+    },
+    {
+      "title": "myScheme: PMEGP",
+      "url": "https://www.myscheme.gov.in/schemes/pmegp",
+      "publisher": "myScheme (MeitY / NeGD)",
+      "accessed": "2026-10-03"
+    }
+  ],
+  "lastVerified": "2026-10-03",
+  "keywords": [
+    "self employment",
+    "start business",
+    "micro enterprise",
+    "margin money subsidy",
+    "entrepreneur"
+  ],
+  "dataVersion": 2,
+  "updatedOn": "2026-10-03",
+  "lifecycle": "pending-verification",
+  "verification": {
+    "level": "unverified",
+    "by": "migration",
+    "on": "2026-10-03",
+    "method": "Record created 2026-10-03 from official pages read during development; not yet checked by the verification pipeline."
+  },
+  "history": [
+    {
+      "version": 1,
+      "date": "2026-10-03",
+      "lifecycle": "pending-verification",
+      "change": "Initial record from official sources read during development.",
+      "by": "dev-assistant"
+    },
+    {
+      "version": 2,
+      "date": "2026-10-03",
+      "lifecycle": "pending-verification",
+      "change": "Placed on hold by audit: The approved scheme period (15th Finance Commission cycle) is 2021-22 to 2025-26, which has ended; no official continuation notice was found.",
+      "by": "maintainer-audit"
+    }
+  ],
+  "citations": [
+    {
+      "claim": "benefit:0",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Launched in August 2008, Prime Minister's Employment Generation Programme (PMEGP) is a credit-linked subsidy scheme, administered by the Ministry of Micro, Small and Medium Enterprises (MSME).",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:age",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Any individual, above 18 years of age.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:caste_certificate",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Caste Certificate",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:project_report",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Project Report",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:education_certificates",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Caste Certificate",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Visit the official website https://www.kviconline.gov.in/pmegpeportal/pmegphome/index.jsp.",
+      "readOn": "2026-10-03"
+    }
+  ],
+  "hold": {
+    "reason": "The approved scheme period (15th Finance Commission cycle) is 2021-22 to 2025-26, which has ended; no official continuation notice was found.",
+    "since": "2026-10-03"
+  }
+}

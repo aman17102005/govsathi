@@ -1,0 +1,19 @@
+{
+  "passed": false,
+  "partial": true,
+  "date": "2026-10-03",
+  "performedBy": "development assistant (automated tests and self-review)",
+  "note": "Partial. Not a substitute for the independent/human work listed under notDone.",
+  "done": [
+    "axe-core: 0 violations on /welcome, /onboarding/basic, /find (with results, RTL Urdu, 375px), /ai, /scheme/:id, /explore in Hindi (and results page in Urdu)",
+    "Fixed: duplicate region landmarks in result cards; nav-count badge contrast (3.27 -> 6.26) and its screen-reader text",
+    "Design-token contrast computed: text pairs >= 6.2:1",
+    "Keyboard: skip link, focus-visible outline, native controls"
+  ],
+  "notDone": [
+    "Screen-reader testing (TalkBack/VoiceOver/NVDA) in multiple scripts",
+    "Manual keyboard walkthrough of every flow",
+    "axe 'incomplete' contrast items (3 nodes) not manually checked",
+    "Zoom/text-resize testing, reduced-motion"
+  ]
+}

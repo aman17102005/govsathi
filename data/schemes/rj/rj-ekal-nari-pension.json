@@ -1,0 +1,235 @@
+{
+  "id": "rj-ekal-nari-pension",
+  "level": "state",
+  "stateCodes": [
+    "RJ"
+  ],
+  "names": {
+    "en": "Chief Minister Ekal Nari Samman Pension Yojana"
+  },
+  "department": "Government of Rajasthan",
+  "categories": [
+    "pension",
+    "women",
+    "social_welfare"
+  ],
+  "benefits": [
+    {
+      "type": "pension",
+      "amount": 1500,
+      "period": "month",
+      "upTo": true
+    }
+  ],
+  "rules": [
+    {
+      "id": "woman",
+      "hard": true,
+      "rule": {
+        "fact": "gender",
+        "op": "eq",
+        "value": "female"
+      }
+    },
+    {
+      "id": "age",
+      "hard": true,
+      "rule": {
+        "fact": "age",
+        "op": "gte",
+        "value": 18
+      }
+    },
+    {
+      "id": "marital",
+      "hard": true,
+      "rule": {
+        "fact": "maritalStatus",
+        "op": "in",
+        "value": [
+          "widowed",
+          "divorced"
+        ]
+      }
+    },
+    {
+      "id": "income",
+      "hard": false,
+      "rule": {
+        "fact": "personalIncome",
+        "op": "lte",
+        "value": 48000
+      }
+    }
+  ],
+  "additionalConditions": true,
+  "documents": [
+    "aadhaar",
+    "birth_certificate",
+    "ration_card",
+    "residence_proof",
+    "bank_account_details",
+    "photograph",
+    "self_declaration",
+    "death_certificate"
+  ],
+  "apply": {
+    "channels": [
+      "online_portal"
+    ],
+    "steps": [
+      "visit_portal",
+      "fill_form",
+      "upload_documents",
+      "submit_form"
+    ],
+    "url": "https://ssp.rajasthan.gov.in/"
+  },
+  "sources": [
+    {
+      "title": "Rajasthan SSP portal",
+      "url": "https://ssp.rajasthan.gov.in/",
+      "publisher": "Government of Rajasthan",
+      "accessed": "2026-10-03"
+    },
+    {
+      "title": "myScheme: Chief Minister Ekal Nari Samman Pension Yojana",
+      "url": "https://www.myscheme.gov.in/schemes/cmenspy",
+      "publisher": "myScheme (MeitY / NeGD)",
+      "accessed": "2026-10-03"
+    }
+  ],
+  "lastVerified": "2026-10-03",
+  "keywords": [
+    "widow",
+    "divorced woman",
+    "abandoned woman",
+    "single woman",
+    "pension"
+  ],
+  "dataVersion": 2,
+  "updatedOn": "2026-10-03",
+  "lifecycle": "published",
+  "verification": {
+    "level": "automated",
+    "by": "ingest-pipeline",
+    "on": "2026-10-03",
+    "method": "Claims matched against fetched official source text (keyword/number evidence). Not checked by a person."
+  },
+  "history": [
+    {
+      "version": 1,
+      "date": "2026-10-03",
+      "lifecycle": "pending-verification",
+      "change": "Initial record from official sources read during development.",
+      "by": "dev-assistant"
+    },
+    {
+      "version": 2,
+      "date": "2026-10-03",
+      "lifecycle": "published",
+      "change": "Passed the automated publication gate (official sources, claim citations, no open discrepancy, current).",
+      "by": "ingest-pipeline"
+    }
+  ],
+  "citations": [
+    {
+      "claim": "benefit:0",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Above the age of 75 years: 1500/- per month.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:woman",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Under this scheme, a pension amount is given to all the divorced, widowed or abandoned women of Rajasthan so that they can easily bear the expenses of their house.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:age",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "From 18 to 55 years old: Rs 500/- per month.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:marital",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "In particular, Article 41 of the Constitution of India directs the State to provide public assistance to its citizens in case of destitute, old age, sickness and disablement and in other cases of undeserved want within the limit of its econ",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:income",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Annual income from all sources should be less than Rs 48,000/-.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:aadhaar",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "Aadhaar",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:birth_certificate",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Birth certificate.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:ration_card",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Ration Card.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:residence_proof",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Original residence certificate.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:bank_account_details",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "Bank Account",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:photograph",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Applicant - Passport-size photo.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:self_declaration",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "Cancellation Undertaking Format For SDO/BDO",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:death_certificate",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Death certificate of husband for widow pension.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "RajSSP",
+      "readOn": "2026-10-03"
+    }
+  ]
+}

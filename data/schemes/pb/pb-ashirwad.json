@@ -1,0 +1,179 @@
+{
+  "id": "pb-ashirwad",
+  "level": "state",
+  "stateCodes": [
+    "PB"
+  ],
+  "names": {
+    "en": "Ashirwad"
+  },
+  "department": "Government of Punjab",
+  "categories": [
+    "women",
+    "social_welfare",
+    "finance"
+  ],
+  "benefits": [
+    {
+      "type": "cash",
+      "amount": 51000,
+      "period": "once"
+    }
+  ],
+  "rules": [
+    {
+      "id": "woman",
+      "hard": true,
+      "rule": {
+        "fact": "gender",
+        "op": "eq",
+        "value": "female"
+      }
+    },
+    {
+      "id": "age",
+      "hard": true,
+      "rule": {
+        "fact": "age",
+        "op": "gte",
+        "value": 18
+      }
+    },
+    {
+      "id": "income",
+      "hard": true,
+      "rule": {
+        "fact": "familyIncome",
+        "op": "lte",
+        "value": 32790
+      }
+    }
+  ],
+  "additionalConditions": true,
+  "documents": [
+    "aadhaar",
+    "age_proof",
+    "income_certificate",
+    "caste_certificate"
+  ],
+  "apply": {
+    "channels": [
+      "sewa_kendra"
+    ],
+    "steps": [
+      "visit_office"
+    ]
+  },
+  "sources": [
+    {
+      "title": "Ashirwad portal",
+      "url": "https://ashirwad.punjab.gov.in/ashirwad/",
+      "publisher": "Government of Punjab",
+      "accessed": "2026-10-03"
+    },
+    {
+      "title": "myScheme: Ashirwad",
+      "url": "https://www.myscheme.gov.in/schemes/asd",
+      "publisher": "myScheme (MeitY / NeGD)",
+      "accessed": "2026-10-03"
+    }
+  ],
+  "lastVerified": "2026-10-03",
+  "keywords": [
+    "marriage",
+    "shagun",
+    "wedding assistance",
+    "girl marriage",
+    "financial help"
+  ],
+  "dataVersion": 3,
+  "updatedOn": "2026-10-03",
+  "lifecycle": "published",
+  "verification": {
+    "level": "automated",
+    "by": "ingest-pipeline",
+    "on": "2026-10-03",
+    "method": "Claims matched against fetched official source text (keyword/number evidence). Not checked by a person."
+  },
+  "history": [
+    {
+      "version": 1,
+      "date": "2026-10-03",
+      "lifecycle": "pending-verification",
+      "change": "Initial record from official sources read during development.",
+      "by": "dev-assistant"
+    },
+    {
+      "version": 2,
+      "date": "2026-10-03",
+      "lifecycle": "pending-verification",
+      "change": "Applications accepted only through Sewa Kendras from 28 Jan 2026, per the notice on the official Ashirwad portal; online-portal channel removed.",
+      "by": "maintainer-audit"
+    },
+    {
+      "version": 3,
+      "date": "2026-10-03",
+      "lifecycle": "published",
+      "change": "Passed the automated publication gate (official sources, claim citations, no open discrepancy, current).",
+      "by": "ingest-pipeline"
+    }
+  ],
+  "citations": [
+    {
+      "claim": "benefit:0",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Financial assistance of ₹51,000/-.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:woman",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Girls from economically disadvantaged parts of society will get financial aid under this program.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:age",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Girl should be 18 years old or above.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:income",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Annual income of the family from all sources does not exceed ₹32,790/-.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:aadhaar",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Aadhar card of the applicant.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:age_proof",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Proof of date of birth (D.O.B).",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:income_certificate",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Income certificate.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:caste_certificate",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Financial assistance is given to Scheduled Castes/Christian girls, Backward Classes/Castes, Economically weaker sections girls, daughters of widows of any caste at the time of their marriage, and Scheduled Castes widows/divorcees at the tim",
+      "readOn": "2026-10-03"
+    }
+  ]
+}

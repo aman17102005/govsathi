@@ -1,0 +1,13 @@
+# TESTER PREVIEW: build:preview offers all 24 languages (23 are unreviewed drafts). Change to `npm run build` for a public launch.
+# One web service: Express serves /api and the built React app.
+services:
+  - type: web
+    name: govsathi
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build:preview
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: "22"

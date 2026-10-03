@@ -1,0 +1,212 @@
+{
+  "id": "rj-hamari-betiyan",
+  "level": "state",
+  "stateCodes": [
+    "RJ"
+  ],
+  "names": {
+    "en": "Mukhya Mantri Hamari Betiyan Yojana"
+  },
+  "department": "Education (Elementary and Secondary) Department, Government of Rajasthan",
+  "categories": [
+    "education",
+    "women",
+    "children"
+  ],
+  "benefits": [
+    {
+      "type": "cash"
+    }
+  ],
+  "rules": [
+    {
+      "id": "girl",
+      "hard": true,
+      "rule": {
+        "fact": "gender",
+        "op": "eq",
+        "value": "female"
+      }
+    },
+    {
+      "id": "level",
+      "hard": true,
+      "rule": {
+        "fact": "educationLevel",
+        "op": "eq",
+        "value": "class_11_12"
+      }
+    }
+  ],
+  "additionalConditions": true,
+  "documents": [
+    "aadhaar",
+    "education_certificates",
+    "bank_account_details",
+    "photograph",
+    "jan_aadhaar",
+    "caste_certificate"
+  ],
+  "apply": {
+    "channels": [
+      "school"
+    ],
+    "steps": [
+      "visit_office"
+    ],
+    "url": "https://rajshaladarpan.nic.in/sd3/Home/BSF/Index.aspx"
+  },
+  "sources": [
+    {
+      "title": "Raj Shiksha Darpan",
+      "url": "https://rajshaladarpan.nic.in/sd3/Home/BSF/Index.aspx",
+      "publisher": "Government of Rajasthan",
+      "accessed": "2026-10-03"
+    },
+    {
+      "title": "myScheme: Mukhya Mantri Hamari Betiyan Yojana",
+      "url": "https://www.myscheme.gov.in/schemes/mmhby",
+      "publisher": "myScheme (MeitY / NeGD)",
+      "accessed": "2026-10-03"
+    }
+  ],
+  "lastVerified": "2026-10-03",
+  "keywords": [
+    "girl student",
+    "merit award",
+    "class 10 topper",
+    "incentive"
+  ],
+  "dataVersion": 2,
+  "updatedOn": "2026-10-03",
+  "lifecycle": "published",
+  "verification": {
+    "level": "automated",
+    "by": "ingest-pipeline",
+    "on": "2026-10-03",
+    "method": "Claims matched against fetched official source text (keyword/number evidence). Not checked by a person."
+  },
+  "history": [
+    {
+      "version": 1,
+      "date": "2026-10-03",
+      "lifecycle": "pending-verification",
+      "change": "Initial record from official sources read during development.",
+      "by": "dev-assistant"
+    },
+    {
+      "version": 2,
+      "date": "2026-10-03",
+      "lifecycle": "published",
+      "change": "Passed the automated publication gate (official sources, claim citations, no open discrepancy, current).",
+      "by": "ingest-pipeline"
+    }
+  ],
+  "citations": [
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "benefit:0",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "The scheme “Mukhya Mantri Hamari Betiyan Yojana”, launched by the Education (Elementary and Secondary) Department, Government of Rajasthan, aims to promote and support meritorious girl students by providing financial assistance and recognit",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:girl",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "The scheme “Mukhya Mantri Hamari Betiyan Yojana”, launched by the Education (Elementary and Secondary) Department, Government of Rajasthan, aims to promote and support meritorious girl students by providing financial assistance and recognit",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:level",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "The applicant must be studying in Class 11 at the time of application.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:aadhaar",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Aadhaar card.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:education_certificates",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Please contact your school.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:bank_account_details",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Bank account details.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:photograph",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Passport-size photo.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:caste_certificate",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Caste certificate.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    }
+  ]
+}

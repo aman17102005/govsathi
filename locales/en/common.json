@@ -1,0 +1,14 @@
+{
+  "app.name": "GovSathi",
+  "a11y.skipToContent": "Skip to main content",
+  "language.title": "Choose your language",
+  "language.subtitle": "Select the language you are most comfortable with. You can change it later.",
+  "language.listLabel": "Available languages",
+  "language.continue": "Continue",
+  "language.change": "Change language",
+  "welcome.title": "Let's understand your situation so we can find schemes relevant to you.",
+  "welcome.body": "GovSathi helps you discover Indian government schemes that may be relevant to you.",
+  "welcome.privacy": "Your information stays on this device. Please do not enter passwords, Aadhaar numbers or bank account numbers.",
+  "footer.disclaimer": "GovSathi shows possible matches only and does not confirm eligibility. Please verify details on the official government source.",
+  "error.generic": "Something went wrong. Please try again."
+}

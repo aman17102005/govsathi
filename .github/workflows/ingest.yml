@@ -1,0 +1,35 @@
+name: Official-source monitoring
+on:
+  schedule:
+    - cron: '17 3 * * 1' # weekly, Monday 03:17 UTC
+  workflow_dispatch: {}
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - name: Monitor official sources and run discovery
+        run: npm run ingest -- run
+      - name: Re-evaluate the publication gate (demote-only: this job never publishes)
+        run: npm run ingest -- promote --demote-only
+      - name: Report
+        run: |
+          npm run ingest -- status
+          npm run schemes:report || true
+      - name: Open a pull request for a person to review
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            branch="ingest/$(date -u +%Y-%m-%d)"
+            git config user.name "govsathi-ingest"; git config user.email "ingest@users.noreply.github.com"
+            git checkout -b "$branch"; git add -A; git commit -m "Official-source monitoring results $(date -u +%F)"
+            git push origin "$branch"
+            gh pr create --title "Source monitoring $(date -u +%F)" --body "Automated monitoring output: snapshots, audit log, demotions and discovered candidates. A person must review demotions and candidates; nothing here publishes a new scheme."
+          fi

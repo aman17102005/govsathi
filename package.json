@@ -1,0 +1,35 @@
+{
+  "name": "govsathi",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev:web": "npm run dev -w @govsathi/web",
+    "dev:api": "npm run dev -w @govsathi/api",
+    "i18n:check": "tsx tools/i18n-check/cli.ts",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "vitest run",
+    "build": "npm run i18n:check && npm run schemes:lint && npm run build -w @govsathi/web && npm run build -w @govsathi/api",
+    "start": "node apps/api/dist/index.js",
+    "schemes:lint": "tsx tools/scheme-lint/cli.ts",
+    "readiness": "tsx tools/readiness/cli.ts",
+    "i18n:readiness": "tsx tools/readiness/cli.ts",
+    "build:preview": "VITE_ENABLE_UNREVIEWED_LOCALES=1 npm run build",
+    "schemes:report": "tsx tools/scheme-lint/report.ts",
+    "ingest": "tsx tools/ingest/cli.ts",
+    "verify:ai": "tsx apps/api/scripts/verify-ai.ts"
+  },
+  "devDependencies": {
+    "axe-core": "^4.13.0",
+    "tsup": "^8.5.1",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3"
+  }
+}

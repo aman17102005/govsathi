@@ -1,0 +1,134 @@
+{
+  "id": "cen-pmjjby",
+  "level": "central",
+  "stateCodes": [],
+  "names": {
+    "en": "Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY)"
+  },
+  "department": "Ministry of Finance",
+  "categories": [
+    "insurance",
+    "finance"
+  ],
+  "benefits": [
+    {
+      "type": "insurance_cover",
+      "amount": 200000,
+      "period": "year"
+    }
+  ],
+  "rules": [
+    {
+      "id": "age",
+      "hard": true,
+      "rule": {
+        "fact": "age",
+        "op": "between",
+        "value": [
+          18,
+          50
+        ]
+      }
+    },
+    {
+      "id": "bank",
+      "hard": true,
+      "rule": {
+        "fact": "hasBankAccount",
+        "op": "is",
+        "value": true
+      }
+    }
+  ],
+  "additionalConditions": false,
+  "documents": [],
+  "apply": {
+    "channels": [
+      "bank_branch",
+      "post_office"
+    ],
+    "steps": [
+      "fill_form",
+      "visit_office",
+      "submit_form",
+      "collect_acknowledgement"
+    ],
+    "url": "https://jansuraksha.gov.in/"
+  },
+  "sources": [
+    {
+      "title": "Jan Suraksha portal",
+      "url": "https://jansuraksha.gov.in/",
+      "publisher": "Department of Financial Services",
+      "accessed": "2026-10-03"
+    },
+    {
+      "title": "myScheme: PMJJBY",
+      "url": "https://www.myscheme.gov.in/schemes/pmjjby",
+      "publisher": "myScheme (MeitY / NeGD)",
+      "accessed": "2026-10-03"
+    }
+  ],
+  "lastVerified": "2026-10-03",
+  "keywords": [
+    "life insurance",
+    "term insurance",
+    "death cover",
+    "bank account insurance"
+  ],
+  "dataVersion": 2,
+  "updatedOn": "2026-10-03",
+  "lifecycle": "published",
+  "verification": {
+    "level": "automated",
+    "by": "ingest-pipeline",
+    "on": "2026-10-03",
+    "method": "Claims matched against fetched official source text (keyword/number evidence). Not checked by a person."
+  },
+  "history": [
+    {
+      "version": 1,
+      "date": "2026-10-03",
+      "lifecycle": "pending-verification",
+      "change": "Initial record from official sources read during development.",
+      "by": "dev-assistant"
+    },
+    {
+      "version": 2,
+      "date": "2026-10-03",
+      "lifecycle": "published",
+      "change": "Passed the automated publication gate (official sources, claim citations, no open discrepancy, current).",
+      "by": "ingest-pipeline"
+    }
+  ],
+  "citations": [
+    {
+      "claim": "benefit:0",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "PMJJBY offers one- year term life cover of ₹ 2.00 Lakh to all the subscribers in the age group of 18-50 years.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:age",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "All individuals who are account holders of participating banks/ post office in the age group of 18 to 50 years are entitled to join.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:bank",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "The scheme is offered by banks/post offices and administered through life insurance companies.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Step 01: Download and take print of the “CONSENT-CUM-DECLARATION FORM” given in the link below: https://www.jansuraksha.gov.in/Files/PMJJBY/English/ApplicationForm.pdf#zoom=250",
+      "readOn": "2026-10-03"
+    }
+  ]
+}

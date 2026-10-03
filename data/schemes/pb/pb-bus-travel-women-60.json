@@ -1,0 +1,188 @@
+{
+  "id": "pb-bus-travel-women-60",
+  "level": "state",
+  "stateCodes": [
+    "PB"
+  ],
+  "names": {
+    "en": "Concessional Bus Travel Facility to Women above 60 years of age"
+  },
+  "department": "Department of Social Security and Women & Child Development, Punjab",
+  "categories": [
+    "women",
+    "senior_citizens",
+    "social_welfare"
+  ],
+  "benefits": [
+    {
+      "type": "subsidy"
+    }
+  ],
+  "rules": [
+    {
+      "id": "woman",
+      "hard": true,
+      "rule": {
+        "fact": "gender",
+        "op": "eq",
+        "value": "female"
+      }
+    },
+    {
+      "id": "age",
+      "hard": true,
+      "rule": {
+        "fact": "age",
+        "op": "gte",
+        "value": 60
+      }
+    }
+  ],
+  "additionalConditions": false,
+  "documents": [
+    "age_proof",
+    "residence_proof"
+  ],
+  "apply": {
+    "channels": [
+      "anganwadi"
+    ],
+    "steps": [
+      "visit_office"
+    ],
+    "url": "https://sswcd.punjab.gov.in/en/concessional-bus-travel-facility-to-women-above-60-years-of-age"
+  },
+  "sources": [
+    {
+      "title": "Punjab SSWCD scheme page",
+      "url": "https://sswcd.punjab.gov.in/en/concessional-bus-travel-facility-to-women-above-60-years-of-age",
+      "publisher": "Government of Punjab",
+      "accessed": "2026-10-03"
+    },
+    {
+      "title": "myScheme: Concessional Bus Travel Facility to Women above 60 years – Punjab",
+      "url": "https://www.myscheme.gov.in/schemes/cbtfw60ya-p",
+      "publisher": "myScheme (MeitY / NeGD)",
+      "accessed": "2026-10-03"
+    }
+  ],
+  "lastVerified": "2026-10-03",
+  "keywords": [
+    "bus pass",
+    "free travel",
+    "women senior",
+    "half fare",
+    "transport"
+  ],
+  "dataVersion": 3,
+  "updatedOn": "2026-10-03",
+  "lifecycle": "pending-verification",
+  "verification": {
+    "level": "automated",
+    "by": "ingest-pipeline",
+    "on": "2026-10-03",
+    "method": "Claims matched against fetched official source text (keyword/number evidence). Not checked by a person."
+  },
+  "history": [
+    {
+      "version": 1,
+      "date": "2026-10-03",
+      "lifecycle": "pending-verification",
+      "change": "Initial record from official sources read during development.",
+      "by": "dev-assistant"
+    },
+    {
+      "version": 2,
+      "date": "2026-10-03",
+      "lifecycle": "published",
+      "change": "Passed the automated publication gate (official sources, claim citations, no open discrepancy, current).",
+      "by": "ingest-pipeline"
+    },
+    {
+      "version": 3,
+      "date": "2026-10-03",
+      "lifecycle": "pending-verification",
+      "change": "Failed the publication gate: uncited claims: benefit:0",
+      "by": "ingest-pipeline"
+    }
+  ],
+  "citations": [
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:woman",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Concessional Bus Travel Facility to Women above 60 years of age- Punjab",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:age",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Concessional Bus Travel Facility to Women above 60 years of age- Punjab",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:age_proof",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Age proof (Aadhar Card, Matric Certificate)",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:residence_proof",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "All the Child Development Project Officers have been authorized to issue such passes on the production of age and residence proof.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    }
+  ]
+}

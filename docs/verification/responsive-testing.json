@@ -1,0 +1,15 @@
+{
+  "passed": false,
+  "partial": true,
+  "date": "2026-10-03",
+  "performedBy": "development assistant (automated tests and self-review)",
+  "note": "Partial. Not a substitute for the independent/human work listed under notDone.",
+  "done": [
+    "375px emulation: no horizontal overflow on /find results (Urdu, RTL)",
+    "Earlier checks: Tamil bottom-nav clipping fixed"
+  ],
+  "notDone": [
+    "Tablet and desktop matrix on real devices",
+    "Landscape, small-height devices, Safari/Firefox"
+  ]
+}

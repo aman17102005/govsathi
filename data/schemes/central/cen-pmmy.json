@@ -1,0 +1,155 @@
+{
+  "id": "cen-pmmy",
+  "level": "central",
+  "stateCodes": [],
+  "names": {
+    "en": "Pradhan Mantri Mudra Yojana (PMMY)"
+  },
+  "department": "Ministry of Finance",
+  "categories": [
+    "entrepreneurship",
+    "finance"
+  ],
+  "benefits": [
+    {
+      "type": "loan",
+      "amount": 2000000,
+      "upTo": true
+    }
+  ],
+  "rules": [
+    {
+      "id": "business",
+      "hard": true,
+      "anyOf": [
+        {
+          "fact": "occupation",
+          "op": "in",
+          "value": [
+            "business_owner",
+            "artisan",
+            "street_vendor"
+          ]
+        },
+        {
+          "fact": "wantsBusiness",
+          "op": "is",
+          "value": true
+        }
+      ]
+    }
+  ],
+  "additionalConditions": true,
+  "documents": [
+    "id_proof",
+    "residence_proof",
+    "photograph"
+  ],
+  "apply": {
+    "channels": [
+      "online_portal",
+      "bank_branch"
+    ],
+    "steps": [
+      "visit_portal",
+      "enter_details",
+      "fill_form",
+      "upload_documents",
+      "submit_form"
+    ]
+  },
+  "sources": [
+    {
+      "title": "MUDRA official website",
+      "url": "https://www.mudra.org.in/",
+      "publisher": "MUDRA Ltd",
+      "accessed": "2026-10-03"
+    },
+    {
+      "title": "myScheme: Pradhan Mantri Mudra Yojana",
+      "url": "https://www.myscheme.gov.in/schemes/pmmy",
+      "publisher": "myScheme (MeitY / NeGD)",
+      "accessed": "2026-10-03"
+    }
+  ],
+  "lastVerified": "2026-10-03",
+  "keywords": [
+    "mudra",
+    "business loan",
+    "small business",
+    "micro enterprise",
+    "self employed",
+    "shishu",
+    "kishore",
+    "tarun"
+  ],
+  "dataVersion": 3,
+  "updatedOn": "2026-10-03",
+  "lifecycle": "published",
+  "verification": {
+    "level": "automated",
+    "by": "ingest-pipeline",
+    "on": "2026-10-03",
+    "method": "Claims matched against fetched official source text (keyword/number evidence). Not checked by a person."
+  },
+  "history": [
+    {
+      "version": 1,
+      "date": "2026-10-03",
+      "lifecycle": "pending-verification",
+      "change": "Initial record from official sources read during development.",
+      "by": "dev-assistant"
+    },
+    {
+      "version": 2,
+      "date": "2026-10-03",
+      "lifecycle": "pending-verification",
+      "change": "Removed apply link: its host is not a gov.in/nic.in domain, so it cannot be treated as an official link; the official source pages are shown instead.",
+      "by": "maintainer-audit"
+    },
+    {
+      "version": 3,
+      "date": "2026-10-03",
+      "lifecycle": "published",
+      "change": "Passed the automated publication gate (official sources, claim citations, no open discrepancy, current).",
+      "by": "ingest-pipeline"
+    }
+  ],
+  "citations": [
+    {
+      "claim": "benefit:0",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "The scheme facilitates micro credit/Loan up to Rs 20 lakhs to income generating micro enterprises engaged in the non farm sector in manufacturing, trading or service sectors including activities allied to agriculture such as poultry, dairy,",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:business",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "BusinessLoanMUDRA",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:id_proof",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "ID Proof",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:residence_proof",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Address Proof",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:photograph",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Passport size photograph",
+      "readOn": "2026-10-03"
+    }
+  ]
+}

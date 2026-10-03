@@ -1,0 +1,16 @@
+{
+  "passed": false,
+  "partial": true,
+  "date": "2026-10-03",
+  "performedBy": "development assistant (automated tests and self-review)",
+  "note": "Partial. Not a substitute for the independent/human work listed under notDone.",
+  "done": [
+    "No-AI mode, invalid key, unknown model, quota, outage, malformed output -> deterministic results (api.test.ts, ai.test.ts)",
+    "Server unreachable -> on-device search (code path; not load-tested)",
+    "Invalid-key round trip to the real Gemini endpoint mapped to the localized auth error"
+  ],
+  "notDone": [
+    "Live quota (429) behaviour per provider",
+    "Offline PWA/service-worker behaviour"
+  ]
+}

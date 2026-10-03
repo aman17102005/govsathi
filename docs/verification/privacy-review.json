@@ -1,0 +1,16 @@
+{
+  "passed": false,
+  "partial": true,
+  "date": "2026-10-03",
+  "performedBy": "development assistant (automated tests and self-review)",
+  "note": "Partial. Not a substitute for the independent/human work listed under notDone.",
+  "done": [
+    "Data-flow documented (docs/privacy-and-trust.md): no profile, no keys, no personal request logs on the server",
+    "Delete-all clears profile and AI key"
+  ],
+  "notDone": [
+    "Citizen-facing privacy policy text",
+    "Legal/DPDP Act review",
+    "Provider data-retention terms review for each AI provider"
+  ]
+}

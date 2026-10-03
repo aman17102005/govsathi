@@ -1,0 +1,17 @@
+{
+  "passed": false,
+  "partial": true,
+  "date": "2026-10-03",
+  "performedBy": "development assistant (automated tests and self-review)",
+  "note": "Partial. Not a substitute for the independent/human work listed under notDone.",
+  "done": [
+    "Validation unit/API tests with fake providers: invented scheme ids, URLs, amounts, wrong script, certainty claims all rejected",
+    "Prompt-injection suite; LLM never sees fetched page text",
+    "Unsupported/failed AI falls back to deterministic results"
+  ],
+  "notDone": [
+    "Live adversarial run against each provider (needs a user-supplied key: npm run verify:ai)",
+    "Reviewed per-language question set",
+    "Unsupported-question handling review with native speakers"
+  ]
+}

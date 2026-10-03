@@ -1,0 +1,179 @@
+{
+  "id": "rj-kalibai-scooty",
+  "level": "state",
+  "stateCodes": [
+    "RJ"
+  ],
+  "names": {
+    "en": "Kali Bai Bheel Medhavi Chhatra Scooty Yojana – 12th Pass"
+  },
+  "department": "Higher Education Department, Government of Rajasthan",
+  "categories": [
+    "education",
+    "women"
+  ],
+  "benefits": [
+    {
+      "type": "goods"
+    }
+  ],
+  "rules": [
+    {
+      "id": "girl",
+      "hard": true,
+      "rule": {
+        "fact": "gender",
+        "op": "eq",
+        "value": "female"
+      }
+    },
+    {
+      "id": "level",
+      "hard": true,
+      "rule": {
+        "fact": "educationLevel",
+        "op": "eq",
+        "value": "undergraduate"
+      }
+    }
+  ],
+  "additionalConditions": true,
+  "documents": [
+    "education_certificates"
+  ],
+  "apply": {
+    "channels": [
+      "emitra"
+    ],
+    "steps": [
+      "visit_office"
+    ],
+    "url": "https://hte.rajasthan.gov.in/scholarship/0303202101.pdf"
+  },
+  "sources": [
+    {
+      "title": "Higher Education Department scheme document",
+      "url": "https://hte.rajasthan.gov.in/scholarship/0303202101.pdf",
+      "publisher": "Government of Rajasthan",
+      "accessed": "2026-10-03"
+    },
+    {
+      "title": "myScheme: Kali Bai Bheel Medhavi Chhatra Scooty Yojana (12th Pass)",
+      "url": "https://www.myscheme.gov.in/schemes/kbbbbmcsytp",
+      "publisher": "myScheme (MeitY / NeGD)",
+      "accessed": "2026-10-03"
+    }
+  ],
+  "lastVerified": "2026-10-03",
+  "keywords": [
+    "scooty",
+    "scooter",
+    "girl student",
+    "meritorious",
+    "college girl"
+  ],
+  "dataVersion": 2,
+  "updatedOn": "2026-10-03",
+  "lifecycle": "published",
+  "verification": {
+    "level": "automated",
+    "by": "ingest-pipeline",
+    "on": "2026-10-03",
+    "method": "Claims matched against fetched official source text (keyword/number evidence). Not checked by a person."
+  },
+  "history": [
+    {
+      "version": 1,
+      "date": "2026-10-03",
+      "lifecycle": "pending-verification",
+      "change": "Initial record from official sources read during development.",
+      "by": "dev-assistant"
+    },
+    {
+      "version": 2,
+      "date": "2026-10-03",
+      "lifecycle": "published",
+      "change": "Passed the automated publication gate (official sources, claim citations, no open discrepancy, current).",
+      "by": "ingest-pipeline"
+    }
+  ],
+  "citations": [
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "benefit:0",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Kali Bai Bheel Medhavi Chhatra Scooty Yojana (12th Pass)",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:girl",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "The scheme “Kali Bai Bheel Medhavi Chhatra Scooty Yojana (12th Pass)” launched by the Higher Education Department, Government of Rajasthan, aims to support meritorious girl students by providing scooters or ₹40,000 to eligible girl students",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:level",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "The applicant must be studying in any school or college located in Rajasthan.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:education_certificates",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "The applicant must be studying in any school or college located in Rajasthan.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    }
+  ]
+}

@@ -1,0 +1,224 @@
+{
+  "id": "pb-bebe-nanki",
+  "level": "state",
+  "stateCodes": [
+    "PB"
+  ],
+  "names": {
+    "en": "Bebe Nanki Laadli Beti Kalyan Scheme"
+  },
+  "department": "Department of Social Security and Women & Child Development, Punjab",
+  "categories": [
+    "children",
+    "women",
+    "finance"
+  ],
+  "benefits": [
+    {
+      "type": "cash",
+      "amount": 61000,
+      "period": "once"
+    }
+  ],
+  "rules": [
+    {
+      "id": "income",
+      "hard": true,
+      "rule": {
+        "fact": "familyIncome",
+        "op": "lte",
+        "value": 30000
+      }
+    },
+    {
+      "id": "daughter",
+      "hard": false,
+      "rule": {
+        "fact": "hasDaughterUnder10",
+        "op": "is",
+        "value": true
+      }
+    }
+  ],
+  "additionalConditions": true,
+  "documents": [
+    "residence_proof",
+    "aadhaar",
+    "birth_certificate",
+    "income_certificate",
+    "bank_account_details"
+  ],
+  "apply": {
+    "channels": [
+      "district_office"
+    ],
+    "steps": [
+      "visit_office",
+      "fill_form",
+      "submit_form"
+    ],
+    "url": "https://sswcd.punjab.gov.in/en/bebe-nanki-laadli-beti-kalyan-scheme"
+  },
+  "sources": [
+    {
+      "title": "Punjab SSWCD scheme page",
+      "url": "https://sswcd.punjab.gov.in/en/bebe-nanki-laadli-beti-kalyan-scheme",
+      "publisher": "Government of Punjab",
+      "accessed": "2026-10-03"
+    },
+    {
+      "title": "myScheme: Bebe Nanki Laadli Beti Kalyan Scheme",
+      "url": "https://www.myscheme.gov.in/schemes/bnlbks",
+      "publisher": "myScheme (MeitY / NeGD)",
+      "accessed": "2026-10-03"
+    }
+  ],
+  "lastVerified": "2026-10-03",
+  "keywords": [
+    "girl child",
+    "daughter",
+    "birth",
+    "laadli",
+    "beti",
+    "education of girl"
+  ],
+  "dataVersion": 4,
+  "updatedOn": "2026-10-03",
+  "lifecycle": "published",
+  "verification": {
+    "level": "automated",
+    "by": "ingest-pipeline",
+    "on": "2026-10-03",
+    "method": "Claims matched against fetched official source text (keyword/number evidence). Not checked by a person."
+  },
+  "history": [
+    {
+      "version": 1,
+      "date": "2026-10-03",
+      "lifecycle": "pending-verification",
+      "change": "Initial record from official sources read during development.",
+      "by": "dev-assistant"
+    },
+    {
+      "version": 2,
+      "date": "2026-10-03",
+      "lifecycle": "published",
+      "change": "Passed the automated publication gate (official sources, claim citations, no open discrepancy, current).",
+      "by": "ingest-pipeline"
+    },
+    {
+      "version": 3,
+      "date": "2026-10-03",
+      "lifecycle": "pending-verification",
+      "change": "Failed the publication gate: uncited claims: rule:income",
+      "by": "ingest-pipeline"
+    },
+    {
+      "version": 4,
+      "date": "2026-10-03",
+      "lifecycle": "published",
+      "change": "Passed the automated publication gate (official sources, claim citations, no open discrepancy, current).",
+      "by": "ingest-pipeline"
+    }
+  ],
+  "citations": [
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "benefit:0",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Financial assistance of Rs 61,000 to the Guardian of Girl Child in different stages up to the age of 18 years.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:income",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Families with an annual income of less than ₹30,000 qualify for the scheme.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:daughter",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "The scheme is a significant initiative aimed at preventing female foeticide and promoting the education and welfare of girl children.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:residence_proof",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "The parents of the girl child must be permanent residents of Punjab.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:birth_certificate",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "It provides financial assistance to eligible families at different stages to reduce the financial burden associated with the birth and upbringing of a girl child.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:income_certificate",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Income Proof.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:bank_account_details",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Bank account Details.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    }
+  ]
+}

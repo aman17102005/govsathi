@@ -1,0 +1,224 @@
+{
+  "id": "pb-post-matric-sc",
+  "level": "state",
+  "stateCodes": [
+    "PB"
+  ],
+  "names": {
+    "en": "Post Matric Scholarship for Scheduled Castes"
+  },
+  "department": "Government of Punjab",
+  "categories": [
+    "education",
+    "social_welfare"
+  ],
+  "benefits": [
+    {
+      "type": "scholarship"
+    }
+  ],
+  "rules": [
+    {
+      "id": "sc",
+      "hard": true,
+      "rule": {
+        "fact": "category",
+        "op": "eq",
+        "value": "sc"
+      }
+    },
+    {
+      "id": "level",
+      "hard": true,
+      "rule": {
+        "fact": "educationLevel",
+        "op": "in",
+        "value": [
+          "class_11_12",
+          "diploma_iti",
+          "undergraduate",
+          "postgraduate",
+          "doctorate"
+        ]
+      }
+    },
+    {
+      "id": "income",
+      "hard": true,
+      "rule": {
+        "fact": "familyIncome",
+        "op": "lte",
+        "value": 250000
+      }
+    }
+  ],
+  "additionalConditions": true,
+  "documents": [
+    "aadhaar",
+    "residence_proof",
+    "education_certificates",
+    "photograph",
+    "bank_account_details"
+  ],
+  "apply": {
+    "channels": [
+      "online_portal"
+    ],
+    "steps": [
+      "visit_portal",
+      "register_login",
+      "fill_form",
+      "upload_documents",
+      "submit_form"
+    ],
+    "url": "https://www.scholarships.punjab.gov.in/"
+  },
+  "sources": [
+    {
+      "title": "Punjab scholarships portal",
+      "url": "https://www.scholarships.punjab.gov.in/",
+      "publisher": "Government of Punjab",
+      "accessed": "2026-10-03"
+    },
+    {
+      "title": "myScheme: Post Matric Scholarship for Scheduled Caste",
+      "url": "https://www.myscheme.gov.in/schemes/pmssc",
+      "publisher": "myScheme (MeitY / NeGD)",
+      "accessed": "2026-10-03"
+    }
+  ],
+  "lastVerified": "2026-10-03",
+  "keywords": [
+    "scholarship",
+    "sc student",
+    "college fees",
+    "dalit",
+    "post matric",
+    "tuition fees"
+  ],
+  "dataVersion": 1,
+  "updatedOn": "2026-10-03",
+  "lifecycle": "pending-verification",
+  "verification": {
+    "level": "unverified",
+    "by": "migration",
+    "on": "2026-10-03",
+    "method": "Record created 2026-10-03 from official pages read during development; not yet checked by the verification pipeline."
+  },
+  "history": [
+    {
+      "version": 1,
+      "date": "2026-10-03",
+      "lifecycle": "pending-verification",
+      "change": "Initial record from official sources read during development.",
+      "by": "dev-assistant"
+    }
+  ],
+  "citations": [
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "benefit:0",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Post Matric Scholarship For Scheduled Caste",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:level",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Post Matric Scholarship For Scheduled Caste",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:income",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Scholarships will be paid to the students whose parents/guardians' income from all sources does not exceed Rs 2,50,000/- (Rupees two lakh, fifty thousand only) per annum.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:aadhaar",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Students shall be encouraged to have Aadhaar-linked Bank accounts to facilitate payments through the Aadhaar Payment Bridge.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:residence_proof",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "the State/UT in which permanently settled or domiciled, as per the terms of domicile decided by the State)",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:education_certificates",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "This applies to all the students who are currently beneficiaries of the scheme as well as fresh admissions.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:photograph",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Passport-size photograph (3 copies).",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:bank_account_details",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Banking, Insurance, Taxation etc.) for which entrance qualification is minimum Sr.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "declared",
+      "quote": "Apply link recorded by the maintainer from the official scheme page; not machine-checked.",
+      "readOn": "2026-10-03"
+    }
+  ]
+}

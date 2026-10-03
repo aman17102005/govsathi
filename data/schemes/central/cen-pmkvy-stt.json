@@ -1,0 +1,137 @@
+{
+  "id": "cen-pmkvy-stt",
+  "level": "central",
+  "stateCodes": [],
+  "names": {
+    "en": "Pradhan Mantri Kaushal Vikas Yojana 4.0 – Short-Term Training"
+  },
+  "department": "Ministry of Skill Development and Entrepreneurship",
+  "categories": [
+    "skill_development",
+    "employment"
+  ],
+  "benefits": [
+    {
+      "type": "training"
+    }
+  ],
+  "rules": [
+    {
+      "id": "age",
+      "hard": true,
+      "rule": {
+        "fact": "age",
+        "op": "between",
+        "value": [
+          15,
+          45
+        ]
+      }
+    },
+    {
+      "id": "bank",
+      "hard": true,
+      "rule": {
+        "fact": "hasBankAccount",
+        "op": "is",
+        "value": true
+      }
+    }
+  ],
+  "additionalConditions": true,
+  "documents": [
+    "aadhaar",
+    "bank_account_details"
+  ],
+  "apply": {
+    "channels": [
+      "training_centre"
+    ],
+    "steps": [
+      "visit_office"
+    ],
+    "url": "https://www.pmkvyofficial.org/trainingcenter"
+  },
+  "sources": [
+    {
+      "title": "myScheme: PMKVY 4.0 Short-Term Training",
+      "url": "https://www.myscheme.gov.in/schemes/pmkvy-stt",
+      "publisher": "myScheme (MeitY / NeGD)",
+      "accessed": "2026-10-03"
+    }
+  ],
+  "lastVerified": "2026-10-03",
+  "keywords": [
+    "skill training",
+    "job training",
+    "dropout",
+    "certification",
+    "kaushal"
+  ],
+  "dataVersion": 2,
+  "updatedOn": "2026-10-03",
+  "lifecycle": "pending-verification",
+  "verification": {
+    "level": "unverified",
+    "by": "migration",
+    "on": "2026-10-03",
+    "method": "Record created 2026-10-03 from official pages read during development; not yet checked by the verification pipeline."
+  },
+  "history": [
+    {
+      "version": 1,
+      "date": "2026-10-03",
+      "lifecycle": "pending-verification",
+      "change": "Initial record from official sources read during development.",
+      "by": "dev-assistant"
+    },
+    {
+      "version": 2,
+      "date": "2026-10-03",
+      "lifecycle": "pending-verification",
+      "change": "Placed on hold by audit: The record reflects PMKVY 3.0 short-term training; PMKVY 4.0 now sits under the restructured Skill India Programme (approved to 2025-26). Needs a rewrite against current official guidelines.",
+      "by": "maintainer-audit"
+    }
+  ],
+  "citations": [
+    {
+      "claim": "rule:age",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "Is aged between 15-45 years",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:bank",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "Possesses an Aadhaar card and an Aadhaar linked bank account",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:aadhaar",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "It is mandatory for the candidates to have an Aadhaar ID during the enrolment process.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:bank_account_details",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "Possesses an Aadhaar card and an Aadhaar linked bank account",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "https://www.pmkvyofficial.org/trainingcenter",
+      "readOn": "2026-10-03"
+    }
+  ],
+  "hold": {
+    "reason": "The record reflects PMKVY 3.0 short-term training; PMKVY 4.0 now sits under the restructured Skill India Programme (approved to 2025-26). Needs a rewrite against current official guidelines.",
+    "since": "2026-10-03"
+  }
+}

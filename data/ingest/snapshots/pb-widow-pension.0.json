@@ -1,0 +1,15 @@
+{
+  "schemeId": "pb-widow-pension",
+  "src": 0,
+  "url": "https://connect.punjab.gov.in/service/citizenservice/112",
+  "finalUrl": "https://connect.punjab.gov.in/service/citizenservice/112",
+  "method": "http",
+  "retrievedAt": "2026-10-03T09:49:37.497Z",
+  "title": "Connect Punjab",
+  "etag": "\"6a4dd99b-4097\"",
+  "lastModified": "Wed, 08 Jul 2026 05:01:15 GMT",
+  "textHash": "a3a5dded4ca722a33aa381e293777e3d60957b660024c525f8ac14dead0b623b",
+  "claimHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "claimCount": 0,
+  "text": "Connect Punjab"
+}

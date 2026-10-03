@@ -1,0 +1,203 @@
+{
+  "id": "cen-pm-vishwakarma",
+  "level": "central",
+  "stateCodes": [],
+  "names": {
+    "en": "PM Vishwakarma"
+  },
+  "department": "Ministry of Micro, Small and Medium Enterprises",
+  "categories": [
+    "entrepreneurship",
+    "skill_development",
+    "finance"
+  ],
+  "benefits": [
+    {
+      "type": "loan",
+      "amount": 100000
+    },
+    {
+      "type": "subsidy",
+      "amount": 15000,
+      "period": "once"
+    },
+    {
+      "type": "stipend",
+      "amount": 500,
+      "period": "day"
+    }
+  ],
+  "rules": [
+    {
+      "id": "age",
+      "hard": true,
+      "rule": {
+        "fact": "age",
+        "op": "gte",
+        "value": 18
+      }
+    },
+    {
+      "id": "artisan",
+      "hard": true,
+      "rule": {
+        "fact": "occupation",
+        "op": "in",
+        "value": [
+          "artisan"
+        ]
+      }
+    }
+  ],
+  "additionalConditions": true,
+  "documents": [
+    "aadhaar",
+    "mobile_number",
+    "bank_account_details",
+    "ration_card"
+  ],
+  "apply": {
+    "channels": [
+      "csc",
+      "online_portal"
+    ],
+    "steps": [
+      "visit_office",
+      "enter_details",
+      "submit_form",
+      "track_status"
+    ],
+    "url": "https://pmvishwakarma.gov.in/"
+  },
+  "sources": [
+    {
+      "title": "PM Vishwakarma official portal",
+      "url": "https://pmvishwakarma.gov.in/",
+      "publisher": "Ministry of MSME",
+      "accessed": "2026-10-03"
+    },
+    {
+      "title": "myScheme: PM Vishwakarma",
+      "url": "https://www.myscheme.gov.in/schemes/pmv",
+      "publisher": "myScheme (MeitY / NeGD)",
+      "accessed": "2026-10-03"
+    }
+  ],
+  "lastVerified": "2026-10-03",
+  "keywords": [
+    "artisan",
+    "craftsperson",
+    "traditional trade",
+    "toolkit",
+    "skill training",
+    "vishwakarma"
+  ],
+  "dataVersion": 3,
+  "updatedOn": "2026-10-03",
+  "lifecycle": "published",
+  "verification": {
+    "level": "automated",
+    "by": "ingest-pipeline",
+    "on": "2026-10-03",
+    "method": "Claims matched against fetched official source text (keyword/number evidence). Not checked by a person."
+  },
+  "history": [
+    {
+      "version": 1,
+      "date": "2026-10-03",
+      "lifecycle": "pending-verification",
+      "change": "Initial record from official sources read during development.",
+      "by": "dev-assistant"
+    },
+    {
+      "version": 2,
+      "date": "2026-10-03",
+      "lifecycle": "pending-verification",
+      "change": "Validity added: scheme runs up to FY 2027-28.",
+      "by": "maintainer-audit"
+    },
+    {
+      "version": 3,
+      "date": "2026-10-03",
+      "lifecycle": "published",
+      "change": "Passed the automated publication gate (official sources, claim citations, no open discrepancy, current).",
+      "by": "ingest-pipeline"
+    }
+  ],
+  "citations": [
+    {
+      "claim": "benefit:0",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "Collateral free Enterprise Development Loans: Rs 1 lakh (First Tranche for 18 months",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "benefit:1",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "Toolkit Incentive: Rs 15,000 grant",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "benefit:2",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "Training Stipend: Rs 500 per day",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:age",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "The minimum age of the beneficiary should be 18 years on the date of registration.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "rule:artisan",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "“Traditionally, crores of 'Vishwakarmas' who create something or the other by working hard with their hands, tools and equipment are the builders of this country.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:aadhaar",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "On the \"Aadhaar Verification\" Page, enter the 6-digit OTP received on your Aadhaar-linked Mobile Number.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:mobile_number",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "On the \"Aadhaar Verification\" Page, enter the 6-digit OTP received on your Aadhaar-linked Mobile Number.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:bank_account_details",
+      "src": 1,
+      "evidence": "text-match",
+      "quote": "Bank details,",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "document:ration_card",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "self-employment basis, shall be eligible for registration under PM Vishwakarma.",
+      "readOn": "2026-10-03"
+    },
+    {
+      "claim": "apply.url",
+      "src": 0,
+      "evidence": "text-match",
+      "quote": "PM Vishwakarma",
+      "readOn": "2026-10-03"
+    }
+  ],
+  "validity": {
+    "endDate": "2028-03-31",
+    "src": 1
+  }
+}
